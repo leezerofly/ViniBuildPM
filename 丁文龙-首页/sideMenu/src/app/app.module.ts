@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { MeetingPage } from '../pages/meeting/meeting';
 import { DiscussPage } from '../pages/discuss/discuss';
+import { UserPage } from '../pages/user/user';
 import { Fabs } from '../pages/fabs/fabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -19,6 +20,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     MeetingPage,
     DiscussPage,
+    UserPage,
     Fabs
   ],
   imports: [
@@ -32,6 +34,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ListPage,
     MeetingPage,
     DiscussPage,
+    UserPage,
     Fabs
   ],
   providers: [
