@@ -4,10 +4,12 @@ import { Platform } from 'ionic-angular';
 
 
 @Component({
+  selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
-  pet: string = "puppies";
+
+  navigation: string = "home";
   isAndroid: boolean = false;
 
   constructor(platform: Platform) {
