@@ -1,0 +1,75 @@
+
+
+<ion-content padding>
+
+    <ion-toolbar no-border-top>
+      <ion-segment [(ngModel)]="topic">
+        <ion-segment-button value="publish">
+          我发布的
+        </ion-segment-button>
+        <ion-segment-button value="participate">
+          我参与的
+        </ion-segment-button>
+      </ion-segment>
+    </ion-toolbar>
+
+  
+  <ion-content>
+    <div [ngSwitch]="topic">
+      <ion-list *ngSwitchCase="'publish'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Ruby</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Oscar</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Zoey</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Otto</h2>
+        </ion-item>
+      </ion-list>
+  
+      <ion-list *ngSwitchCase="'participate'">
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Luna</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Milo</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Bandit</h2>
+        </ion-item>
+        <ion-item>
+          <ion-thumbnail item-start>
+            <img src="">
+          </ion-thumbnail>
+          <h2>Nala</h2>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-content>
+</ion-content>
