@@ -10,60 +10,70 @@
   </ion-navbar>
 
   <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]=" navigation">
+      <ion-segment [(ngModel)]=" navigation">
       <ion-segment-button value="home">
-        Home
+          Home
       </ion-segment-button>
       <ion-segment-button value="task">
-        Task
+          Task
       </ion-segment-button>
       <ion-segment-button value="meeting">
-        Meeting
+          Meeting
       </ion-segment-button>
       <ion-segment-button value="discuss">
           Discuss
       </ion-segment-button>
       <ion-segment-button value="question">
-            Question
+              Question
       </ion-segment-button>
       <ion-segment-button value="user">
               User
       </ion-segment-button>
-    </ion-segment>
-  </ion-toolbar>
+      </ion-segment>
+</ion-toolbar>
 </ion-header>
+
+<!-- <top></top> -->
 
 <ion-content>
   <div [ngSwitch]="navigation">
     <ion-list *ngSwitchCase="'home'">
       <ion-item>
         <ion-thumbnail item-start>
-          
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-            <h2>Oscar</h2>
-        </ion-thumbnail>
-        
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-            <h2>Zoey</h2> 
+            <h1>标题</h1>
+            <p>发帖人</p>
+            <p>时间</p>
         </ion-thumbnail>
        
       </ion-item>
       <ion-item>
         <ion-thumbnail item-start>
-            <h2>Otto</h2>
+            <h1>标题</h1>
+            <p>发帖人</p>
+            <p>时间</p>
+        </ion-thumbnail>
+        
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+            <h1>标题</h1>
+            <p>发帖人</p>
+            <p>时间</p>
+        </ion-thumbnail>
+       
+      </ion-item>
+      <ion-item>
+        <ion-thumbnail item-start>
+            <h1>标题</h1>
+            <p>发帖人</p>
+            <p>时间</p>
         </ion-thumbnail>
         
       </ion-item>
     </ion-list>
 
     <ion-list *ngSwitchCase="'task'"> 
-      <!-- <page-list></page-list> -->
+      <page-task></page-task>
     </ion-list>
 
     <ion-list *ngSwitchCase="'meeting'">
@@ -71,15 +81,15 @@
     </ion-list>
 
     <ion-list *ngSwitchCase="'discuss'"> 
-        <!-- <page-discuss></page-discuss>  -->
+        <page-discuss></page-discuss> 
       </ion-list>
 
       <ion-list *ngSwitchCase="'question'"> 
-          <!-- <page-question></page-question>   -->
+          <page-question></page-question> 
         </ion-list>
 
         <ion-list *ngSwitchCase="'user'">
-            <!-- <page-user></page-user>    -->
+            <page-user></page-user>   
           </ion-list>
    <fabs></fabs>
   </div>
