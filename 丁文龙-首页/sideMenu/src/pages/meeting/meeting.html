@@ -10,46 +10,45 @@
             <button ion-button menuToggle>
                     <ion-icon name="menu"></ion-icon>
                   </button>
-        <ion-title>question</ion-title>
+        <ion-title>meeting</ion-title>
       </ion-navbar>
     
 
-  <!-- <ion-toolbar no-border-top>
-    <ion-segment [(ngModel)]=" navigation">
-    <ion-segment-button value="home">
-        Home
-    </ion-segment-button>
-    <ion-segment-button value="task">
-        Task
-    </ion-segment-button>
-    <ion-segment-button value="meeting">
-        Meeting
-    </ion-segment-button>
-    <ion-segment-button value="discuss">
-        Discuss
-    </ion-segment-button>
-    <ion-segment-button value="question">
-            Question
-    </ion-segment-button>
-    <ion-segment-button value="user">
-            User
-    </ion-segment-button>
-    </ion-segment>
-</ion-toolbar>
-  <ion-navbar>
-    <ion-title>meeting</ion-title>
-  </ion-navbar> -->
+      <!-- <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]=" navigation">
+        <ion-segment-button value="home">
+            Home
+        </ion-segment-button>
+        <ion-segment-button value="task">
+            Task
+        </ion-segment-button>
+        <ion-segment-button value="meeting">
+            Meeting
+        </ion-segment-button>
+        <ion-segment-button value="discuss">
+            Discuss
+        </ion-segment-button>
+        <ion-segment-button value="question">
+                Question
+        </ion-segment-button>
+        <ion-segment-button value="user">
+                User
+        </ion-segment-button>
+        </ion-segment>
+  </ion-toolbar> -->
+
+  <top></top>
 
 </ion-header>
 
 
 <ion-content padding>
-    <!-- <div [ngSwitch]="navigation">
+    <div [ngSwitch]="navigation">
         <ion-list *ngSwitchCase="'home'">
          <page-home></page-home>
     </ion-list>
   <ion-list *ngSwitchCase="'task'"> 
-    <page-list></page-list>
+    <page-task></page-task>
   </ion-list>
 
   <ion-list *ngSwitchCase="'meeting'">
@@ -67,5 +66,5 @@
       <ion-list *ngSwitchCase="'user'">
           <page-user></page-user>   
         </ion-list>
-        </div> -->
+        </div>
 </ion-content>
