@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Contact
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+      <ion-item>
+          <ion-label>验证密保问题</ion-label>
+          <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <div padding>
+          <button ion-button color="light" block>下一步</button>
+      </div>
+     <ion-item>
+      <ion-label>选择密保问题1</ion-label>
+      <ion-select [(ngModel)]="first" interface="popover">
+        <ion-option value="1">NES</ion-option>
+        <ion-option value="2">Nintendo64</ion-option>
+        <ion-option value="3">PlayStation</ion-option>
+        <ion-option value="4">Sega Genesis</ion-option>
+        <ion-option value="5">Sega Saturn</ion-option>
+        <ion-option value="6">SNES</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+        <ion-label>输入问题答案</ion-label>
+        <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label>选择密保问题2</ion-label>
+        <ion-select [(ngModel)]="second" interface="popover">
+          <ion-option value="1">NES</ion-option>
+          <ion-option value="2">Nintendo64</ion-option>
+          <ion-option value="3">PlayStation</ion-option>
+          <ion-option value="4">Sega Genesis</ion-option>
+          <ion-option value="5">Sega Saturn</ion-option>
+          <ion-option value="6">SNES</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+          <ion-label>输入问题答案</ion-label>
+          <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>选择密保问题3</ion-label>
+          <ion-select [(ngModel)]="third" interface="popover">
+            <ion-option value="1">NES</ion-option>
+            <ion-option value="2">Nintendo64</ion-option>
+            <ion-option value="3">PlayStation</ion-option>
+            <ion-option value="4">Sega Genesis</ion-option>
+            <ion-option value="5">Sega Saturn</ion-option>
+            <ion-option value="6">SNES</ion-option>
+          </ion-select>
+      </ion-item>
+      <ion-item>
+           <ion-label>输入问题答案</ion-label>
+          <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <div padding>
+          <button ion-button color="light" (click)="doAlert()">确认</button>
+          <button ion-button color="light" block>取消</button>
+      </div>
+  </ion-list>
+</ion-content>

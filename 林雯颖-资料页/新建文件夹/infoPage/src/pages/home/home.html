@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>基本信息</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list>
+     <ion-item>
+        <ion-label>用户名</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>真实姓名</ion-label>
+        <ion-input type="password" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+          <ion-label>性别</ion-label>
+        <ion-select [(ngModel)]="gender">
+          <ion-option value="m">男</ion-option>
+          <ion-option value="f">女</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label>联系方式</ion-label>
+        <ion-input type="password" value=""></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>个性签名</ion-label>
+        <ion-input type="text" value=""></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <ion-card>
+    <ion-card-content>
+      <img src="assets/img/img-icon.png" />
+    </ion-card-content>
+
+    <ion-item>
+      <button ion-button clear color="primary">选择图片</button>
+    </ion-item>
+  </ion-card>
+
+    <div padding>
+        <button ion-button color="light" block>编辑</button>
+    </div>
+
+</ion-content>

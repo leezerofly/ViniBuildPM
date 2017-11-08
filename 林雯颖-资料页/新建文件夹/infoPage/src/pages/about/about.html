@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      修改密码
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+       <ion-label>验证旧密码</ion-label>
+       <ion-input type="text" value=""></ion-input>
+     </ion-item>
+  </ion-list>
+  <div padding>
+      <button ion-button color="light" block>确认</button>
+  </div>
+  <ion-list>
+    <ion-item>
+       <ion-label>输入新密码</ion-label>
+       <ion-input type="text" value=""></ion-input>
+     </ion-item>
+     <ion-item>
+      <ion-label>确认新密码</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+  <div padding>
+      <button ion-button color="light" (click)="doAlert()">确认修改</button>
+  </div>
+</ion-content>
