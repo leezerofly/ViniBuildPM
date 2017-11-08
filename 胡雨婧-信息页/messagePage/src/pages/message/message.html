@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Message   Page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form id="form">
+    <div id="case1">
+      <label for="topic"  id="label1">标题：</label>
+      <input type="text" id="topic" value="">
+    </div>
+
+    <div id="case2">
+      <label for="variety" class="label2">类别：</label>
+      <select id="variety" class="case">
+        <option value="0">任务</option>
+        <option value="1">会议</option>
+        <option value="2">讨论</option>
+        <option value="3">问题</option>
+      </select>
+
+      <label for="level" class="label2">优先级：</label>
+      <select id="level" class="case">
+      <option value="0">最高</option>
+        <option value="1">高</option>
+        <option value="2">中</option>
+        <option value="3">低</option>
+      </select>
+   
+      <label for="who" class="label2">指派给：</label>
+      <select id="who" class="case">
+        <option value=""></option>
+      </select>
+    </div>
+
+
+    <textarea  id="content">
+    </textarea>
+
+    <input type="submit" value="确认发布" id="case3" class="button button-highlight button-box button-large"/>
+  </form>  
+</ion-content>

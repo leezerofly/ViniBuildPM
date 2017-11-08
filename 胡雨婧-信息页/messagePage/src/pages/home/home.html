@@ -1,17 +1,27 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
+  <ion-title>      
+      <input type="text" id="topic" value="One's message" readonly>
+  </ion-title>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+<ion-content>
+    <div id="case2">
+      <label for="variety" class="label2">类别：</label>
+      <input type="text" id="variety" readonly>
+
+      <label for="level" class="label2">优先级：</label>
+      <input type="text" id="level" readonly>
+
+      <label for="who" class="label2">指派给：</label>
+      <input type="text" id="who" readonly>
+    </div>
+
+
+    <textarea  id="content" readonly>
+    </textarea>
+
+    <button type="button" onclick="" id="edit" class="button">编辑</button>
+    <button type="button" onclick="" id="delect" class="button">删除</button>
+    <button type="button" onclick="" id="answer" class="button">回复</button>
+  
 </ion-content>
