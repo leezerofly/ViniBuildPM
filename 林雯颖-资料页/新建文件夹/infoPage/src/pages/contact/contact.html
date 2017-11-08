@@ -1,23 +1,35 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      修改密保
     </ion-title>
   </ion-navbar>
 </ion-header>
 
-<ion-content>
+<ion-content padding>
+
+<div id="firstStep" style="display:block;">
   <ion-list>
+      <ion-item>
+        <progress value="3.3" max="10"></progress>
+      </ion-item>
       <ion-item>
           <ion-label>验证密保问题</ion-label>
           <ion-input type="text" value=""></ion-input>
       </ion-item>
-      <div padding>
-          <button ion-button color="light" block>下一步</button>
-      </div>
+  </ion-list>
+  <div padding>
+    <button ion-button color="light" (click)="doSecondStep()" block>下一步</button>
+  </div>
+</div>
+<div id="secondStep" style="display:none;">
+<ion-list>
+    <ion-item>
+      <progress value="6.6" max="10"></progress>
+    </ion-item>
      <ion-item>
       <ion-label>选择密保问题1</ion-label>
-      <ion-select [(ngModel)]="first" interface="popover">
+      <ion-select [(ngModel)]="first" interface="action-sheet">
         <ion-option value="1">NES</ion-option>
         <ion-option value="2">Nintendo64</ion-option>
         <ion-option value="3">PlayStation</ion-option>
@@ -32,7 +44,7 @@
     </ion-item>
     <ion-item>
         <ion-label>选择密保问题2</ion-label>
-        <ion-select [(ngModel)]="second" interface="popover">
+        <ion-select [(ngModel)]="second" interface="action-sheet">
           <ion-option value="1">NES</ion-option>
           <ion-option value="2">Nintendo64</ion-option>
           <ion-option value="3">PlayStation</ion-option>
@@ -47,7 +59,7 @@
       </ion-item>
       <ion-item>
           <ion-label>选择密保问题3</ion-label>
-          <ion-select [(ngModel)]="third" interface="popover">
+          <ion-select [(ngModel)]="third" interface="action-sheet">
             <ion-option value="1">NES</ion-option>
             <ion-option value="2">Nintendo64</ion-option>
             <ion-option value="3">PlayStation</ion-option>
@@ -60,9 +72,21 @@
            <ion-label>输入问题答案</ion-label>
           <ion-input type="text" value=""></ion-input>
       </ion-item>
-      <div padding>
-          <button ion-button color="light" (click)="doAlert()">确认</button>
-          <button ion-button color="light" block>取消</button>
-      </div>
-  </ion-list>
+    </ion-list>
+    <div padding>
+        <button ion-button color="light" (click)="dothirdStep()" block>确认</button>
+        <button ion-button color="light" (click)="returnFirstStep()" block>取消</button>
+    </div>
+</div>
+
+<div id="thirdStep" style="display:none;text-align:center;">     
+    <ion-list>
+        <ion-item>  
+        <progress value="10" max="10"></progress>
+        </ion-item>
+        <ion-item>
+        <p style="font-size:66px;">修改成功</p>
+      </ion-item>
+    </ion-list>
+</div>
 </ion-content>

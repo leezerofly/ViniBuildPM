@@ -11,14 +11,19 @@ export class ContactPage {
   constructor(public navCtrl: NavController,public alerCtrl: AlertController) {
 
   }
-  
-  doAlert() {
-    let alert = this.alerCtrl.create({
-      title: '提示',
-      message: '修改成功!',
-      buttons: ['Ok']
-    });
-    alert.present()
-  }
 
+doSecondStep() {
+    document.getElementById('firstStep').style.display='none';
+    document.getElementById('secondStep').style.display='block';
+}
+
+dothirdStep(){
+    document.getElementById('secondStep').style.display='none';
+    document.getElementById('thirdStep').style.display='block';
+}
+
+returnFirstStep(){
+    document.getElementById('firstStep').style.display='block';
+    document.getElementById('secondStep').style.display='none';
+}
 }

@@ -9,17 +9,23 @@ import { AlertController } from 'ionic-angular';
 export class AboutPage {
 
 constructor(public alerCtrl: AlertController,public navCtrl: NavController) {
-
+ 
 }
 
 
-doAlert() {
-  let alert = this.alerCtrl.create({
-    title: '提示',
-    message: '修改成功!',
-    buttons: ['Ok']
-  });
-  alert.present()
+toSecondStep() {
+  document.getElementById('first').style.display='none';
+  document.getElementById('second').style.display='block';
+}
+
+toThirdStep() {
+  document.getElementById('second').style.display='none';
+  document.getElementById('third').style.display='block';
+}
+
+returnFirstStep(){
+  document.getElementById('first').style.display='block';
+  document.getElementById('second').style.display='none';
 }
 
 }
