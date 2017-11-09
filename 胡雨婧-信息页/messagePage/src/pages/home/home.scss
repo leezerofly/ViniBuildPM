@@ -47,7 +47,7 @@ page-home{
         border-top: solid blue 2px;
         border:1px solid blue;
         overflow: auto;
-
+        border-radius: 6px;
     }
 
     #edit{
@@ -88,7 +88,7 @@ page-home{
  		box-shadow: 0 3px #999;
 
  	}
- 	.button:active {
+ 	button:active {
   	background-color: #3e8e41;
  	box-shadow: 0 5px #666;
   	transform: translateY(4px);

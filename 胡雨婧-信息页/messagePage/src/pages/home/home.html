@@ -1,27 +1,32 @@
 <ion-header>
-  <ion-title>      
-      <input type="text" id="topic" value="One's message" readonly>
-  </ion-title>
+  <ion-navbar>
+    <ion-title>Home Page</ion-title>
+  </ion-navbar>
 </ion-header>
 
 <ion-content>
+    <div id="case1">
+      标题：
+      <input type="text" id="topic">
+    </div>
+
     <div id="case2">
       <label for="variety" class="label2">类别：</label>
-      <input type="text" id="variety" readonly>
+      <input type="text" id="variety">
 
       <label for="level" class="label2">优先级：</label>
-      <input type="text" id="level" readonly>
+      <input type="text" id="level">
 
       <label for="who" class="label2">指派给：</label>
-      <input type="text" id="who" readonly>
+      <input type="text" id="who">
     </div>
 
 
-    <textarea  id="content" readonly>
+    <textarea  id="content">
     </textarea>
 
-    <button type="button" onclick="" id="edit" class="button">编辑</button>
-    <button type="button" onclick="" id="delect" class="button">删除</button>
-    <button type="button" onclick="" id="answer" class="button">回复</button>
+    <button type="button" onclick="" id="edit">编辑</button>
+    <button type="button" onclick="" id="delect">删除</button>
+    <button type="button" onclick="" id="answer">回复</button>
   
 </ion-content>

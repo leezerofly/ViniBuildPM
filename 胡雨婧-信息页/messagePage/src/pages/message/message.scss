@@ -6,12 +6,15 @@ page-message{
     #case1{
         margin-left: 20%;margin-right: 20%;margin-top: 5%;margin-bottom: 10px;
         border: 1px blue solid;
+        border-radius: 2px;
     }
-    #topic{
+    input{
+        width: 80%;
+        height: 5%;
         border:none;
         overflow: ellipsis; 
     }
-    #topic:hover{
+    input:hover{
       text-overflow: inherit;
       overflow: visible;
     }
@@ -47,25 +50,17 @@ page-message{
         padding: 5px;
         border-top: solid blue 2px;
         border:1px solid blue;
+        border-radius: 6px;
         overflow: auto;
 
     }
 
-    #case3{
+    button{
       margin-left: 45%;margin-right: 40%;margin-top: 1%;
       height: 1cm;
       background-color: #4CAF50;
       border-radius: 8px;
     }
-    /*
-    #tool{
-        text-align: center;
-      margin-top: 10px;
-      height: 5 px;
-      width: 40%;
-      border:1px solid blue;
-      border-bottom: hidden;
 
-    }*/
 }
 
