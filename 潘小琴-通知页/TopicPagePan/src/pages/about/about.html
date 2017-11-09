@@ -17,57 +17,32 @@
   <ion-content>
     <div [ngSwitch]="topic">
       <ion-list *ngSwitchCase="'publish'">
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Ruby</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Oscar</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Zoey</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Otto</h2>
-        </ion-item>
-      </ion-list>
+            <ion-item (click)="openModal({charNum: 0})">
+                <h1>Gollum</h1>
+                <p>Tom      2017/11/18</p>
+            </ion-item>
+
+            <ion-item (click)="openModal({charNum: 1})">
+               <h1>Gollum</h1> 
+               <p>Tom      2017/11/18</p>
+              </ion-item>
+
+              <ion-item (click)="openModal({charNum: 2})">
+               <h1>Gollum</h1>
+               <p>Tom      2017/11/18</p>
+              </ion-item>
+        </ion-list>
   
       <ion-list *ngSwitchCase="'participate'">
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Luna</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Milo</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Bandit</h2>
-        </ion-item>
-        <ion-item>
-          <ion-thumbnail item-start>
-            <img src="">
-          </ion-thumbnail>
-          <h2>Nala</h2>
-        </ion-item>
+           <ion-item (click)="openModal({charNum: 0})">
+              <h1>Gollum</h1>
+            </ion-item>
+            <ion-item (click)="openModal({charNum: 1})">
+              <h1>Frodo Baggins</h1>
+            </ion-item>
+            <ion-item (click)="openModal({charNum: 2})">
+              <h1>Sam</h1>
+            </ion-item>
       </ion-list>
 
     </div>
