@@ -35,3 +35,15 @@ export class HomePage {
   }
 
 }
+
+@Component({
+  template: `
+    <ion-tabs class="tabs-basic">
+      <ion-tab tabTitle="Music" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="Movies" [root]="rootPage"></ion-tab>
+      <ion-tab tabTitle="Games" [root]="rootPage"></ion-tab>
+    </ion-tabs>
+`})
+export class BasicPage {
+  rootPage = HomePage;
+}

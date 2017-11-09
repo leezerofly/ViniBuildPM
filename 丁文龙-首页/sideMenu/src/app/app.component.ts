@@ -9,6 +9,7 @@ import { MeetingPage } from '../pages/meeting/meeting';
 import { DiscussPage } from '../pages/discuss/discuss';
 import { UserPage } from '../pages/user/user';
 import { QuestionPage } from '../pages/question/question';
+// import { TabsPage } from '../pages/tabs/tabs';
 
 
 @Component({
