@@ -14,6 +14,9 @@ import { OpenDiscussPage } from '../pages/open-discuss/open-discuss';
 import { NoticePage } from '../pages/notice/notice';
 import { PersonalDataPage } from '../pages/personalData/personalData';
 import { CreatTopicPage } from '../pages/creat-topic/creat-topic';
+import { MenuPage } from '../pages/menu/menu';
+
+
 import { Fabs } from '../pages/fabs/fabs';
 
 
@@ -35,6 +38,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     NoticePage,
     PersonalDataPage,
     CreatTopicPage,
+
+    MenuPage,
     Fabs,
 
    
@@ -59,6 +64,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     PersonalDataPage,
     CreatTopicPage,
 
+    MenuPage,
     Fabs,
 
    

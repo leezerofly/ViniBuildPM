@@ -1,16 +1,54 @@
 <ion-header>
+  <ion-navbar>    
+      
+         <p> 
+            <button ion-button clear icon-only>
+              <ion-icon style="color:black" name="menu"></ion-icon>
+              <h3 style="color:black">首页</h3>
+            </button>
+             
+                <button ion-button class="person-icon" clear icon-only>
+                    <ion-icon  name="person"></ion-icon>
+                  </button>
+                  <button ion-button class="message-icon" clear icon-only>
+                  <ion-icon  name="chatbubbles"></ion-icon>
+                </button>
+           </p>
 
-    
+   
+  </ion-navbar>    
 </ion-header>
 
 <ion-content>
 
-  
+
     <ion-list >
-      <button class="Home-button" ion-item (click)="openPage(OpenDiscussPage)" >
-          <h1>标题1</h1>
-      </button>
-      <button class="Home-button" ion-item (click)="openPage()">
+      
+
+      <!-- 下拉栏 -->
+    <button ion-item  (click)="isShow=!isShow">
+      <ion-item>
+          用户信息
+      <ion-icon name="ios-arrow-down" item-right  *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
+      <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon>
+     </ion-item>
+    </button>
+        <ion-list *ngIf="isShow">
+          <ion-item></ion-item>
+                <button class="Home-button" ion-item >
+                    <h1>用户资料</h1>
+                  </button> 
+                  <ion-item></ion-item>
+                      <button class="Home-button" ion-item >
+                          <h1>消息通知</h1>
+                        </button> 
+                 <ion-item></ion-item>
+          </ion-list>
+
+        <!-- 主界面内容 -->
+
+  <!--(click)="openPage(OpenDiscussPage)"-->
+      <button class="Home-button" ion-item >
         <h1>标题2</h1>
       </button>
       <button class="Home-button" ion-item >
@@ -19,22 +57,18 @@
       <button class="Home-button" ion-item >
         <h1>标题4</h1>
       </button>
-      <button class="Home-button" ion-item (click)="openPage()">
+      <button class="Home-button" ion-item >
         <h1>标题5</h1>
       </button>
-      <button class="Home-button" ion-item (click)="openPage()">
+      <button class="Home-button" ion-item >
         <h1>标题6</h1>
       </button>
-      <button class="Home-button" ion-item (click)="openPage()">
+      <button class="Home-button" ion-item >
         <h1>标题7</h1>
       </button>
     </ion-list> 
 
-<!--     
-    <button class="discuss-button" ion-item *ngFor="let item of items" (click)="itemSelected(item)">
-      {{ item }}
-    </button> -->
-   
+
 
 
    <fabs></fabs>

@@ -1,17 +1,28 @@
 import { Component } from '@angular/core';
 
-import { AboutPage } from '../about/about';
-import { ContactPage } from '../contact/contact';
+import { TaskPage } from '../task/task';
+import { MeetingPage } from '../meeting/meeting';
 import { HomePage } from '../home/home';
+import { DiscussPage } from '../discuss/discuss';
+
+import { QuestionPage } from '../question/question';
+
+// import { UserPage } from '../user/user';
+// import { MenuPage } from '../menu/menu';
 
 @Component({
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
+  
+  homeRoot = HomePage;
+  taskRoot = TaskPage;
+  meetingRoot = MeetingPage;
+  discussRoot = DiscussPage;
+  questionRoot = QuestionPage;
 
-  tab1Root = HomePage;
-  tab2Root = AboutPage;
-  tab3Root = ContactPage;
+  // menuRoot = MenuPage;
+  
   // tabsMenu  = MenuPage;
 
   constructor() {
