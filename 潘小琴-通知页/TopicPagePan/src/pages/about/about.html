@@ -17,31 +17,37 @@
   <ion-content>
     <div [ngSwitch]="topic">
       <ion-list *ngSwitchCase="'publish'">
-            <ion-item (click)="openModal({charNum: 0})">
+
+            <ion-item (click)="openModal(0)">
                 <h1>Gollum</h1>
                 <p>Tom      2017/11/18</p>
             </ion-item>
 
-            <ion-item (click)="openModal({charNum: 1})">
+            <ion-item (click)="openModal(1)">
                <h1>Gollum</h1> 
                <p>Tom      2017/11/18</p>
               </ion-item>
 
-              <ion-item (click)="openModal({charNum: 2})">
+              <ion-item (click)="openModal(2)">
                <h1>Gollum</h1>
                <p>Tom      2017/11/18</p>
               </ion-item>
         </ion-list>
   
       <ion-list *ngSwitchCase="'participate'">
-           <ion-item (click)="openModal({charNum: 0})">
+           <ion-item (click)="openModal(3)">
               <h1>Gollum</h1>
+              <p>Tom      2017/11/18</p>
             </ion-item>
-            <ion-item (click)="openModal({charNum: 1})">
+
+            <ion-item (click)="openModal(4)">
               <h1>Frodo Baggins</h1>
+              <p>Tom      2017/11/18</p>
             </ion-item>
-            <ion-item (click)="openModal({charNum: 2})">
+
+            <ion-item (click)="openModal(5)">
               <h1>Sam</h1>
+              <p>Tom      2017/11/18</p>
             </ion-item>
       </ion-list>
 

@@ -1,7 +1,7 @@
 <ion-header>
         <ion-toolbar>
           <ion-title>
-            Description
+            话题详情
           </ion-title>
           <ion-buttons start>
             <button ion-button (click)="dismiss()">
@@ -15,18 +15,15 @@
       <ion-content>
         <ion-list>
             <ion-item>
-              <ion-avatar item-start>
+              <!-- <ion-avatar item-start>
                 <img src="{{character.image}}">
-              </ion-avatar>
+              </ion-avatar> -->
               <h2>{{character.name}}</h2>
               <p>{{character.quote}}</p>
             </ion-item>
       
-            <ion-item *ngFor="let item of character['items']">
-              {{item.title}}
-              <ion-note item-end>
-                {{item.note}}
-              </ion-note>
+            <ion-item>
+                 <p>{{character.items}}</p>
             </ion-item>
         </ion-list>
       </ion-content>

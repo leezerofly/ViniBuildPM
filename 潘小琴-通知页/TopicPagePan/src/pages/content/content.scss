@@ -1,5 +1,20 @@
 page-content {
-
+    // page-content .bar-button::after {
+    //     left: -100px;
+    //     right: -2px;
+    //     top: 10px;
+    //     bottom: -6px;
+    //     position: absolute;
+    //     content: "Cancle";
+    // }
+    .bar-button::after {
+        left: -100px;
+        right: -2px;
+        top: 5px;
+        bottom: -6px;
+        position: absolute;
+        content: "cancle";
+    }
 
     
 }
