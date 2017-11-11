@@ -8,10 +8,15 @@
 
 <ion-content padding>
 
-<div id="firstStep" style="display:block;">
+<div id="firstStep" *ngIf="tokenDis1==true">
   <ion-list>
       <ion-item>
         <progress value="3.3" max="10"></progress>
+      </ion-item>
+      <ion-item>
+        <select>
+            <option *ngFor="let u of sel0" (click)="setClassify(u)">{{u}}</option>
+        </select>
       </ion-item>
       <ion-item>
           <ion-label>验证密保问题</ion-label>
@@ -22,51 +27,33 @@
     <button ion-button color="light" (click)="doSecondStep()" block>下一步</button>
   </div>
 </div>
-<div id="secondStep" style="display:none;">
+<div id="secondStep" *ngIf="tokenDis2==true">
 <ion-list>
     <ion-item>
       <progress value="6.6" max="10"></progress>
     </ion-item>
      <ion-item>
-      <ion-label>选择密保问题1</ion-label>
-      <ion-select [(ngModel)]="first" interface="action-sheet">
-        <ion-option value="1">NES</ion-option>
-        <ion-option value="2">Nintendo64</ion-option>
-        <ion-option value="3">PlayStation</ion-option>
-        <ion-option value="4">Sega Genesis</ion-option>
-        <ion-option value="5">Sega Saturn</ion-option>
-        <ion-option value="6">SNES</ion-option>
-      </ion-select>
+      <select>
+          <option *ngFor="let u of sel1" (click)="setClassify(u)">{{u}}</option>
+      </select>
     </ion-item>
     <ion-item>
         <ion-label>输入问题答案</ion-label>
         <ion-input type="text" value=""></ion-input>
     </ion-item>
     <ion-item>
-        <ion-label>选择密保问题2</ion-label>
-        <ion-select [(ngModel)]="second" interface="action-sheet">
-          <ion-option value="1">NES</ion-option>
-          <ion-option value="2">Nintendo64</ion-option>
-          <ion-option value="3">PlayStation</ion-option>
-          <ion-option value="4">Sega Genesis</ion-option>
-          <ion-option value="5">Sega Saturn</ion-option>
-          <ion-option value="6">SNES</ion-option>
-        </ion-select>
+        <select>
+            <option *ngFor="let u of sel2" (click)="setClassify(u)">{{u}}</option>
+        </select>
       </ion-item>
       <ion-item>
           <ion-label>输入问题答案</ion-label>
           <ion-input type="text" value=""></ion-input>
       </ion-item>
       <ion-item>
-          <ion-label>选择密保问题3</ion-label>
-          <ion-select [(ngModel)]="third" interface="action-sheet">
-            <ion-option value="1">NES</ion-option>
-            <ion-option value="2">Nintendo64</ion-option>
-            <ion-option value="3">PlayStation</ion-option>
-            <ion-option value="4">Sega Genesis</ion-option>
-            <ion-option value="5">Sega Saturn</ion-option>
-            <ion-option value="6">SNES</ion-option>
-          </ion-select>
+          <select>
+              <option *ngFor="let u of sel3" (click)="setClassify(u)">{{u}}</option>
+          </select>
       </ion-item>
       <ion-item>
            <ion-label>输入问题答案</ion-label>
@@ -74,12 +61,12 @@
       </ion-item>
     </ion-list>
     <div padding>
-        <button ion-button color="light" (click)="dothirdStep()" block>确认</button>
+        <button ion-button color="light" (click)="doThirdStep()" block>确认</button>
         <button ion-button color="light" (click)="returnFirstStep()" block>取消</button>
     </div>
 </div>
 
-<div id="thirdStep" style="display:none;text-align:center;">     
+<div id="thirdStep" *ngIf="tokenDis3==true">     
     <ion-list>
         <ion-item>  
         <progress value="10" max="10"></progress>
@@ -88,5 +75,8 @@
         <p style="font-size:66px;">修改成功</p>
       </ion-item>
     </ion-list>
+    <div padding>
+      <button ion-button color="light" (click)="doForthStep()" block>返回</button>
+    </div>
 </div>
 </ion-content>

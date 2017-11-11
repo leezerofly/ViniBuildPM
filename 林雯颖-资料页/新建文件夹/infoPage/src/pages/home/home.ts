@@ -7,8 +7,10 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController) {
+  gender: string[];
 
+  constructor(public navCtrl: NavController) {
+      this.gender=["性别","男","女"];
   }
 
 }
