@@ -1,17 +1,55 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+<ion-content padding>
+  
+      <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="notify">
+          <ion-segment-button value="assignMe">
+            指派我的
+          </ion-segment-button>
+          <ion-segment-button value="replyMe">
+            回复我的
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+  
+    
+      <ion-content>
+          <div [ngSwitch]="notify">
+            <ion-list *ngSwitchCase="'assignMe'">
+      
+                  <ion-item (click)="openModal(0)">
+                      <h1>标题一</h1>
+                      <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(1)">
+                     <h1>标题二</h1> 
+                     <p>Tom      2017/11/18</p>
+                    </ion-item>
+      
+                    <ion-item (click)="openModal(2)">
+                     <h1>标题三</h1>
+                     <p>Tom      2017/11/18</p>
+                    </ion-item>
+              </ion-list>
+        
+            <ion-list *ngSwitchCase="'replyMe'">
+                 <ion-item (click)="openModal(3)">
+                    <h1>标题一</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(4)">
+                    <h1>标题二</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(5)">
+                    <h1>标题二</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+            </ion-list>
+      
+          </div>
+        </ion-content>
+  </ion-content>
+  

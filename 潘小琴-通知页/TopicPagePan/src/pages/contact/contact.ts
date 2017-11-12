@@ -1,14 +1,20 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform} from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
   templateUrl: 'contact.html'
 })
 export class ContactPage {
+ 
+  notify: string = "assignMe";
+  isAndroid: boolean = false;
 
-  constructor(public navCtrl: NavController) {
-
+  constructor(
+    public  platform: Platform,
+    public navCtrl: NavController
+  ) {
+    this.isAndroid = platform.is('android'); 
   }
 
 }

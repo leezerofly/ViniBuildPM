@@ -1,3 +1,97 @@
-page-home {
+page-home{
+    .toolbar-title-md{
+    text-align: center;
+    }
 
+    .title{
+        margin-left: 20%;margin-right: 20%;margin-top: 5%;margin-bottom: 10px;
+        height: 1cm;
+    }
+    #topic{
+        border:none;
+        overflow: ellipsis; 
+    }
+    #topic:hover{
+      text-overflow: inherit;
+      overflow: visible;
+    }
+
+    #label1{
+      font-size: 25px;font-style: italic;font-color:#505050;
+    }
+    #case2{
+        margin-left: 22%;margin-right: 20%;margin-top: 5%;margin-bottom: 10px;
+
+    }
+    #variety,#level{
+        width: 20%;
+        border:none;
+        margin-right: 1%;
+        border-right: 1px solid blue;
+
+    }
+
+    #who{
+        width: auto;
+        border:none;
+    }
+    .label2{
+      font-size: 20px;font-style: italic;font-color:#505050;
+    }
+
+    #content{
+        margin-left: 25%;margin-right: 25%;margin-top: 2%;
+        width: 50%;
+        height: 5cm;
+        padding: 5px;
+        border-top: solid blue 2px;
+        border:1px solid blue;
+        overflow: auto;
+        border-radius: 6px;
+    }
+
+    #edit{
+     	margin-left: 30%;margin-top: 1%;
+      	height: 1cm;width: 10%;
+      	text-align: center;
+      	border:none;
+      	float: left;
+      	border-radius: 8px;
+      	background-color: #008CBA;
+      	font-size: 16px;
+      	box-shadow: 0 3px #999;
+
+	}
+ 	#delect{
+ 		margin-top: 1%;
+      	height: 1cm;width: 10%;
+      	border:none;
+      	position:relative;
+		left: 20px;
+ 		float: left;
+ 		border-radius: 8px;
+ 		background-color: #008CBA;
+ 		font-size: 16px;
+ 		box-shadow: 0 3px #999;
+
+ 	}
+ 	#answer{
+ 		margin-top: 1%;
+      	height: 1cm;width: 10%;
+      	border:none;
+      	position:relative;
+		left: 40px;
+ 		float: left;
+ 		border-radius: 8px;
+ 		background-color: #008CBA;
+ 		font-size: 16px;
+ 		box-shadow: 0 3px #999;
+
+ 	}
+ 	button:active {
+  	background-color: #3e8e41;
+ 	box-shadow: 0 5px #666;
+  	transform: translateY(4px);
+	}
 }
+

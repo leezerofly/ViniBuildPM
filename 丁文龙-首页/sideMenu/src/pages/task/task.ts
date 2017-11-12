@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'task.html',
 })
 export class TaskPage {
-
+  // rootPage = TaskPage;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 

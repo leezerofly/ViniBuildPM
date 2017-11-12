@@ -1,0 +1,37 @@
+<ion-header>
+      <ion-toolbar no-border-top>
+        <ion-segment [(ngModel)]="pet">
+          <ion-segment-button value="home">
+            首页
+          </ion-segment-button>
+          <ion-segment-button value="task">
+            任务
+          </ion-segment-button>
+          <ion-segment-button value="debate">
+            讨论
+          </ion-segment-button>
+          <ion-segment-button value="question">
+           问题
+          </ion-segment-button>
+        </ion-segment>
+      </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+    <div [ngSwitch]="pet">
+        <ion-list *ngSwitchCase="'home'">
+            <ion-item>
+                <ion-label fixed>标题</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-label fixed>内容</ion-label>
+                <ion-input type="text"></ion-input>
+          </ion-item>
+  </ion-list>
+</div>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+</ion-content>
