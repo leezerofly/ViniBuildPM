@@ -1,85 +1,40 @@
-import { Component } from '@angular/core';
+import { Component , ViewChild} from '@angular/core';
 
-import { App, MenuController } from 'ionic-angular';
+import {NavController, Nav} from 'ionic-angular';
+import {HomePage} from "../home/home";
+import { TaskPage } from '../task/task';
+// import { MeetingPage } from '../meeting/meeting';
+// import { DiscussPage } from '../discuss/discuss';
+// import { QuestionPage } from '../question/question';
 
 
 @Component({
-  template: `
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Menus
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-  <button ion-button block menuToggle>Toggle Menu</button>
-</ion-content>
-`
+  selector: 'page-about',
+  templateUrl: 'menu.html'
 })
 export class MenuPage {
-  constructor(app: App, menu: MenuController) {
-    menu.enable(true);
+  @ViewChild(Nav) nav: Nav;
+
+  rootPage: any = HomePage;
+
+  pages: Array<{title: string, component: any}>;
+
+  constructor(public navCtrl: NavController) {
+    // used for an example of ngFor and navigation
+    this.pages = [
+      { title: '首页', component: HomePage },
+      { title: '任务', component: TaskPage },
+      // { title: '会议', component:MeetingPage  },
+      // { title: '讨论', component: DiscussPage },
+      // { title: '问题', component: QuestionPage },
+      // { title: 'Page Two', component: Page2 }
+    ];
   }
+
+  openPage(page) {
+    // Reset the content nav to have just this page
+    // we wouldn't want the back button to show in this scenario
+    this.nav.setRoot(page.component);
+  }
+
 }
-
-@Component({
-  template: `
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Menus
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-  <button ion-button block menuToggle>Toggle Menu</button>
-</ion-content>
-`
-})
-export class PageOne { }
-
-@Component({
-  template: `
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Friends
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-  <button ion-button block menuToggle>Toggle Menu</button>
-</ion-content>
-`
-})
-export class PageTwo { }
-
-@Component({
-  selector: 'menu',
-  template: `
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle icon-only>
-      <ion-icon name='menu'></ion-icon>
-    </button>
-    <ion-title>
-      Events
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-<ion-content padding>
-  <button ion-button block menuToggle>Toggle Menu</button>
-</ion-content>
-`
-})
-export class PageThree { }

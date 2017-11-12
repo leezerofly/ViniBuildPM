@@ -1,20 +1,104 @@
-<!--
-  Generated template for the PersonalDataPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
+    <ion-navbar>    
+        
+          
+                <button ion-button menuToggle>
+                <ion-icon name="menu"></ion-icon>
+              </button>
 
-  <ion-navbar>
-    <ion-title>personalData</ion-title>
-  </ion-navbar>
+        
+              <ion-title>
+                首页 
+                  <button ion-button  class="person-icon" clear icon-only>
+                      <ion-icon  name="person"></ion-icon>
+                    </button>
+                    <button ion-button class="chat-icon"  clear icon-only>
+                    <ion-icon  name="chatbubbles"></ion-icon>
+                  </button>
+              </ion-title>
 
-</ion-header>
-
-
-<ion-content padding>
-
-    <fabs></fabs>
-
-</ion-content>
+           
+  
+  
+    </ion-navbar>    
+  
+  </ion-header>
+  
+  <ion-content>
+    
+      <ion-list >
+        
+  
+        <!-- 下拉栏 -->
+      <!-- <button ion-item  (click)="isShow=!isShow">
+        <ion-item>
+            用户信息
+        <ion-icon name="ios-arrow-down" item-right  *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
+        <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon>
+       </ion-item>
+      </button>
+          <ion-list *ngIf="isShow">
+            <ion-item></ion-item>
+                  <button class="Home-button" ion-item  >
+                      <h1>用户资料</h1>
+                    </button> 
+                    <ion-item></ion-item>
+                        <button class="Home-button" ion-item >
+                            <h1>消息通知</h1>
+                          </button> 
+                   <ion-item></ion-item>
+            </ion-list> -->
+  
+          <!-- 主界面内容 -->
+  
+    <!--(click)="openPage(OpenDiscussPage)"-->
+        <button class="Home-button" ion-item >
+          <h1>标题2</h1>
+        </button>
+        <button class="Home-button" ion-item >
+          <h1>标题3</h1>
+        </button>
+        <button class="Home-button" ion-item >
+          <h1>标题4</h1>
+        </button>
+        <button class="Home-button" ion-item >
+          <h1>标题5</h1>
+        </button>
+        <button class="Home-button" ion-item >
+          <h1>标题6</h1>
+        </button>
+        <button class="Home-button" ion-item >
+          <h1>标题7</h1>
+        </button>
+        <button class="Home-button" ion-item >
+            <h1>标题8</h1>
+          </button>
+          <button class="Home-button" ion-item >
+              <h1>标题9</h1>
+            </button>
+            <button class="Home-button" ion-item >
+                <h1>标题10</h1>
+              </button>
+      </ion-list> 
+  
+      <ion-list clsee="no-lines">
+          <ion-item >  
+              <button ion-button large clear icon-start item-start>
+                  <ion-icon name='arrow-back'></ion-icon>
+                  上一页
+                </button>
+              
+                <p align="center" class="pc-con">第1页</p>
+              
+                <button ion-button large  clear icon-end item-end >
+                    下一页
+                <ion-icon name='arrow-forward'></ion-icon>
+                  </button>
+            </ion-item>
+          </ion-list>
+  
+  
+     <fabs></fabs>
+  
+  </ion-content>
+  
