@@ -1,109 +1,205 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar id="bar">
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>话题广场</ion-title>
+    <ion-title style="text-align:center">话题广场</ion-title>
     <!-- <ion-title>Home</ion-title> -->
   </ion-navbar>
 
 <!-- <ion-toolbar no-border-top> -->
   <ion-segment [(ngModel)]="pet">
-    <ion-segment-button value="createTopic">
-      我发布的话题
+    <ion-segment-button value="MyTopic">
+      我的话题
     </ion-segment-button>
-    <ion-segment-button value="participateTopic">
-      我参与的话题
-    </ion-segment-button>
-    <ion-segment-button value="collectTopic">
-      我的收藏
+    <ion-segment-button value="MyMessage">
+      我的消息列表
     </ion-segment-button>
   </ion-segment>
 <!-- </ion-toolbar> -->
 </ion-header>
 
-<ion-content padding>
+<ion-content padding id="petMain">
   <div [ngSwitch]="pet">
-    <ion-list *ngSwitchCase="'createTopic'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="/assets/img/hamburger.png">
-        </ion-thumbnail>
-        <h2>Ruby</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/coffee.png">
-        </ion-thumbnail>
-        <h2>Oscar</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/icecream.png">
-        </ion-thumbnail>
-        <h2>Zoey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/coffee.png">
-        </ion-thumbnail>
-        <h2>Otto</h2>
-      </ion-item>
-    </ion-list>
 
-    <ion-list *ngSwitchCase="'participateTopic'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-1.jpg">
-        </ion-thumbnail>
-        <h2>Luna</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-3.jpg">
-        </ion-thumbnail>
-        <h2>Milo</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-4.jpg">
-        </ion-thumbnail>
-        <h2>Bandit</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-kitten-2.jpg">
-        </ion-thumbnail>
-        <h2>Nala</h2>
-      </ion-item>
-    </ion-list>
+    <div *ngSwitchCase="'MyTopic'">
 
-    <ion-list *ngSwitchCase="'collectTopic'">
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-1.jpg">
-        </ion-thumbnail>
-        <h2>Daffy</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-2.jpg">
-        </ion-thumbnail>
-        <h2>Huey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-3.jpg">
-        </ion-thumbnail>
-        <h2>Dewey</h2>
-      </ion-item>
-      <ion-item>
-        <ion-thumbnail item-start>
-          <img src="assets/img/thumbnail-duckling-4.jpg">
-        </ion-thumbnail>
-        <h2>Louie</h2>
-      </ion-item>
-    </ion-list>
+      <ion-segment [(ngModel)]="TopicPet">
+        <ion-segment-button value="createTopic">
+          我创建的话题
+        </ion-segment-button>
+        <ion-segment-button value="participateTopic">
+          我参与的话题
+        </ion-segment-button>
+        <ion-segment-button value="collectTopic">
+          我收藏的话题
+        </ion-segment-button>
+      </ion-segment>
+      
+      <div [ngSwitch]="TopicPet">
+        <ion-list *ngSwitchCase="'createTopic'" class="listPet">
+          <ion-item (click)="openModal(0)">
+            <h2>Game</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Oscar</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
+          <ion-item>
+            <h2>Zoey</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Otto</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+        </ion-list>
+       
+        <ion-list *ngSwitchCase="'participateTopic'"  class="listPet">
+          <ion-item (click)="openModal(1)">
+              <h2>Luna</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(2)">
+              <h2>Milo</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(3)">
+              <h2>Bandit</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(4)">
+            <h2>Nala</h2>
+            <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+          <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+        </ion-list>
+       
+        <ion-list *ngSwitchCase="'collectTopic'"  class="listPet">
+          <ion-item>
+            <h2>Daffy</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item>
+            <h2>Huey</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item>
+            <h2>Dewey</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item>
+            <h2>Louie</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+        </ion-list>
+
+      </div>
+      <!-- TopicPet div   -->
+
+    </div>
+    <!-- Mytopic div -->
+
+    <div *ngSwitchCase="'MyMessage'">
+        <ion-segment [(ngModel)]="MessagePet">
+            <ion-segment-button value="MessageList">
+              私信
+            </ion-segment-button>
+            <ion-segment-button value="InformList">
+              通知
+            </ion-segment-button>
+            <ion-segment-button value="AttentionList">
+              关注
+            </ion-segment-button>
+          </ion-segment>
+
+          <div [ngSwitch]="MessagePet">
+              <ion-list *ngSwitchCase="'MessageList'"  class="listPet">
+                    <ion-item (click)="openModal(0)">
+                        <h2>Game</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                        <h2>Oscar</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item >
+                      <ion-item>
+                        <h2>Zoey</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                        <h2>Otto</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                          <h2>Otto</h2>
+                          <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+              </ion-list>
+             
+              <ion-list *ngSwitchCase="'InformList'"  class="listPet">
+                    <ion-item (click)="openModal(0)">
+                        <h2>Game</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                        <h2>Oscar</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item >
+                      <ion-item>
+                        <h2>Zoey</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                        <h2>Otto</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+                      <ion-item >
+                          <h2>Otto</h2>
+                          <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
+              </ion-list>
+             
+              <ion-list *ngSwitchCase="'AttentionList'"  class="listPet">
+                  <ion-item (click)="openModal(0)">
+                      <h2>Game</h2>
+                      <span class="information">Tom 2017/11/11</span>
+                    </ion-item>
+                    <ion-item >
+                      <h2>Oscar</h2>
+                      <span class="information">Tom 2017/11/11</span>
+                    </ion-item >
+                    <ion-item>
+                      <h2>Zoey</h2>
+                      <span class="information">Tom 2017/11/11</span>
+                    </ion-item>
+                    <ion-item >
+                      <h2>Otto</h2>
+                      <span class="information">Tom 2017/11/11</span>
+                    </ion-item>
+                    <ion-item >
+                        <h2>Otto</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                    </ion-item>
+              </ion-list>
+      
+            </div>
+            <!-- TopicPet div   -->  
+    </div>
+    <!-- MyMessage div -->
+
   </div>
-
+<!-- pet div -->
 </ion-content>
