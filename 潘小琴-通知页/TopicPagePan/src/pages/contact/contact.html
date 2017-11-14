@@ -1,81 +1,55 @@
 <ion-content padding>
   
       <ion-toolbar no-border-top>
-        <ion-segment [(ngModel)]="topic">
-          <ion-segment-button value="publish">
+        <ion-segment [(ngModel)]="notify">
+          <ion-segment-button value="assignMe">
             指派我的
           </ion-segment-button>
-          <ion-segment-button value="participate">
+          <ion-segment-button value="replyMe">
             回复我的
           </ion-segment-button>
         </ion-segment>
       </ion-toolbar>
   
     
-    <ion-content>
-      <div [ngSwitch]="topic">
-        <ion-list *ngSwitchCase="'publish'">
-  
-          <ion-item >
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Ruby</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Oscar</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Zoey</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Otto</h2>
-          </ion-item>
-        </ion-list>
-    
-        <ion-list *ngSwitchCase="'participate'">
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Luna</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Milo</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Bandit</h2>
-          </ion-item>
-  
-          <ion-item>
-            <ion-thumbnail item-start>
-              <img src="">
-            </ion-thumbnail>
-            <h2>Nala</h2>
-          </ion-item>
-        </ion-list>
-  
-      </div>
-    </ion-content>
+      <ion-content>
+          <div [ngSwitch]="notify">
+            <ion-list *ngSwitchCase="'assignMe'">
+      
+                  <ion-item (click)="openModal(0)">
+                      <h1>标题一</h1>
+                      <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(1)">
+                     <h1>标题二</h1> 
+                     <p>Tom      2017/11/18</p>
+                    </ion-item>
+      
+                    <ion-item (click)="openModal(2)">
+                     <h1>标题三</h1>
+                     <p>Tom      2017/11/18</p>
+                    </ion-item>
+              </ion-list>
+        
+            <ion-list *ngSwitchCase="'replyMe'">
+                 <ion-item (click)="openModal(3)">
+                    <h1>标题一</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(4)">
+                    <h1>标题二</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+      
+                  <ion-item (click)="openModal(5)">
+                    <h1>标题二</h1>
+                    <p>Tom      2017/11/18</p>
+                  </ion-item>
+            </ion-list>
+      
+          </div>
+        </ion-content>
   </ion-content>
   

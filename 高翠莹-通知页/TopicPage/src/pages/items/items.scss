@@ -1,0 +1,27 @@
+page-items{
+    .bar-button::after {
+        left: -100px;
+        right: -2px;
+        top: 5px;
+        bottom: -6px;
+        position: absolute;
+        content: "cancle";
+    }
+   #itemContent{
+        background:
+        -webkit-gradient(linear,
+        0% 0%,
+        100% 0%,
+        from(#141e30),
+        to(#243b55))
+        !important;
+        opacity: 0.95;
+    }
+    .list{
+        margin: 10px;
+        margin-top: 20px;
+        background: #141e30;
+        opacity: 0.4;
+    }
+
+  }

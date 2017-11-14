@@ -1,4 +1,4 @@
-
+﻿
 
 <ion-content padding>
 
@@ -17,31 +17,70 @@
   <ion-content>
     <div [ngSwitch]="topic">
       <ion-list *ngSwitchCase="'publish'">
-            <ion-item (click)="openModal({charNum: 0})">
-                <h1>Gollum</h1>
+
+            <ion-item (click)="openModal(0)">
+                <h1>标题一</h1>
                 <p>Tom      2017/11/18</p>
             </ion-item>
 
-            <ion-item (click)="openModal({charNum: 1})">
-               <h1>Gollum</h1> 
-               <p>Tom      2017/11/18</p>
+            <ion-item (click)="openModal(1)">
+               <h1>标题二</h1> 
+               <p>Gary      2017/11/18</p>
               </ion-item>
 
-              <ion-item (click)="openModal({charNum: 2})">
-               <h1>Gollum</h1>
+              <ion-item (click)="openModal(2)">
+               <h1>标题三</h1>
                <p>Tom      2017/11/18</p>
               </ion-item>
+              <ion-item (click)="openModal(3)">
+                <h1>标题四</h1>
+                <p>Tom      2017/11/18</p>
+               </ion-item>
+
+               <ion-item (click)="openModal(4)">
+                <h1>标题五</h1>
+                <p>Anna      2017/11/18</p>
+               </ion-item>
+               <ion-item (click)="openModal(5)">
+                <h1>标题六</h1>
+                <p>Alice      2017/10/01</p>
+               </ion-item>
+               <ion-item (click)="openModal(6)">
+                <h1>标题七</h1>
+                <p>Seven      2017/10/18</p>
+               </ion-item>
+
+                <ion-item (click)="openModal(7)">
+                <h1>标题八</h1>
+                <p>Sara     2017/10/18</p>
+               </ion-item>
+              
+               <ion-item (click)="openModal(8)">
+                <h1>标题九</h1>
+                <p>Ida      2017/11/17</p>
+               </ion-item>
+               <ion-item (click)="openModal(9)">
+                <h1>标题十</h1>
+                <p>Pernila      2017/11/13</p>
+               </ion-item>
         </ion-list>
   
+
+        
       <ion-list *ngSwitchCase="'participate'">
-           <ion-item (click)="openModal({charNum: 0})">
-              <h1>Gollum</h1>
+           <ion-item (click)="openModal(10)">
+              <h1>标题一</h1>
+              <p>Tom      2017/11/18</p>
             </ion-item>
-            <ion-item (click)="openModal({charNum: 1})">
-              <h1>Frodo Baggins</h1>
+
+            <ion-item (click)="openModal(11)">
+              <h1>标题二</h1>
+              <p>Tom      2017/11/18</p>
             </ion-item>
-            <ion-item (click)="openModal({charNum: 2})">
-              <h1>Sam</h1>
+
+            <ion-item (click)="openModal(12)">
+              <h1>标题三</h1>
+              <p>Pernila      2017/11/13</p>
             </ion-item>
       </ion-list>
 

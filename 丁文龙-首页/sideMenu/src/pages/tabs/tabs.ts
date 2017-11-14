@@ -1,30 +1,27 @@
-import { Component,ViewChild } from '@angular/core';
-import { HomePage } from '../home/home';
-import { TaskPage } from '../task/task';
-import { MeetingPage } from '../meeting/meeting';
-import { DiscussPage } from '../discuss/discuss';
-import { UserPage } from '../user/user';
-import { QuestionPage } from '../question/question';
-import  { Tabs }         from 'ionic-angular';
+import { Component } from '@angular/core';
+import { IonicPage, NavController } from 'ionic-angular';
 
+/**
+ * Generated class for the TabsPage tabs.
+ *
+ * See https://ionicframework.com/docs/components/#navigation for more info on
+ * Ionic pages and navigation.
+ */
+
+@IonicPage()
 @Component({
-    selector:'tabs-component',
+  selector: 'page-tabs',
   templateUrl: 'tabs.html'
 })
 export class TabsPage {
-  @ViewChild('mainTabs') tabRef:Tabs;
-  tab1Root = HomePage;
-  tab2Root = TaskPage;
-  tab3Root = MeetingPage;
-  tab4Root = DiscussPage;
-  tab5Root = QuestionPage;
-  tab6Root =UserPage;
 
-  constructor() {
+  首页Root = '首页Page'
+  任务Root = '任务Page'
+  会议Root = '会议Page'
+  讨论Root = '讨论Page'
+  问题Root = '问题Page'
 
-  }
-  ionViewDidEnter(){
-    let mainTabs = this.tabRef;
-    mainTabs.select(1);
+
+  constructor(public navCtrl: NavController) {}
 
 }

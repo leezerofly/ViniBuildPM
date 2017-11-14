@@ -8,7 +8,6 @@ import { MeetingPage } from '../pages/meeting/meeting';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DiscussPage } from '../pages/discuss/discuss';
-import { UserPage } from '../pages/user/user';
 import { QuestionPage } from '../pages/question/question';
 import { OpenDiscussPage } from '../pages/open-discuss/open-discuss';
 import { NoticePage } from '../pages/notice/notice';
@@ -32,7 +31,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TaskPage,
     MeetingPage,
     DiscussPage,
-    UserPage,
     QuestionPage,
     OpenDiscussPage,
     NoticePage,
@@ -57,7 +55,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TaskPage,
     MeetingPage,
     DiscussPage,
-    UserPage,
     QuestionPage,
     OpenDiscussPage,
     NoticePage,

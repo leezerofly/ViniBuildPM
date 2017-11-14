@@ -1,76 +1,38 @@
-<ion-header>
-  <ion-navbar>    
-      
-         <p> 
-            <button ion-button clear icon-only>
-              <ion-icon style="color:black" name="menu"></ion-icon>
-              <h3 style="color:black">首页</h3>
-            </button>
-             
-                <button ion-button class="person-icon" clear icon-only>
-                    <ion-icon  name="person"></ion-icon>
-                  </button>
-                  <button ion-button class="message-icon" clear icon-only>
-                  <ion-icon  name="chatbubbles"></ion-icon>
-                </button>
-           </p>
+<ion-menu [content]="menuContent">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>菜单</ion-title>
+      </ion-toolbar>
+    </ion-header>
+  
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
 
-   
-  </ion-navbar>    
-</ion-header>
-
-<ion-content>
-
-
-    <ion-list >
-      
-
-      <!-- 下拉栏 -->
-    <button ion-item  (click)="isShow=!isShow">
-      <ion-item>
-          用户信息
-      <ion-icon name="ios-arrow-down" item-right  *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
-      <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon>
-     </ion-item>
-    </button>
-        <ion-list *ngIf="isShow">
-          <ion-item></ion-item>
-                <button class="Home-button" ion-item >
-                    <h1>用户资料</h1>
-                  </button> 
-                  <ion-item></ion-item>
-                      <button class="Home-button" ion-item >
-                          <h1>消息通知</h1>
+        <button ion-item  (click)="isShow=!isShow">
+            <ion-list>
+                用户信息
+            <!-- <ion-icon name="ios-arrow-down" item-right  *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
+            <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon> -->
+           </ion-list>
+          </button>
+              <ion-list *ngIf="isShow">
+                      <button class="Home-button" ion-item  >
+                          用户资料
                         </button> 
-                 <ion-item></ion-item>
-          </ion-list>
+                            <button class="Home-button" ion-item >
+                                消息通知
+                              </button> 
+                </ion-list>
+  
+      </ion-list>
 
-        <!-- 主界面内容 -->
-
-  <!--(click)="openPage(OpenDiscussPage)"-->
-      <button class="Home-button" ion-item >
-        <h1>标题2</h1>
-      </button>
-      <button class="Home-button" ion-item >
-        <h1>标题3</h1>
-      </button>
-      <button class="Home-button" ion-item >
-        <h1>标题4</h1>
-      </button>
-      <button class="Home-button" ion-item >
-        <h1>标题5</h1>
-      </button>
-      <button class="Home-button" ion-item >
-        <h1>标题6</h1>
-      </button>
-      <button class="Home-button" ion-item >
-        <h1>标题7</h1>
-      </button>
-    </ion-list> 
-
-
-
-
-   <fabs></fabs>
-
-</ion-content>
+      
+    </ion-content>
+  
+  </ion-menu>
+  
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #menuContent swipeBackEnabled="false"></ion-nav>

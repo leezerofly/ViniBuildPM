@@ -4,6 +4,7 @@ import { TaskPage } from '../task/task';
 import { MeetingPage } from '../meeting/meeting';
 import { HomePage } from '../home/home';
 import { DiscussPage } from '../discuss/discuss';
+// import { MenuPage } from '..//menu/menu';
 
 import { QuestionPage } from '../question/question';
 
@@ -15,6 +16,7 @@ import { QuestionPage } from '../question/question';
 })
 export class TabsPage {
   
+  // menuRoot = MenuPage;
   homeRoot = HomePage;
   taskRoot = TaskPage;
   meetingRoot = MeetingPage;
