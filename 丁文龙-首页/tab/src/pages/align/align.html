@@ -1,0 +1,17 @@
+
+
+<button ion-item (click)="isShow=!isShow">
+  <ion-icon  name="person"></ion-icon>
+</button>
+
+<ion-list *ngIf="isShow">
+  <button  ion-item >
+      用户名
+  </button>
+  <button ion-item (click)="openUser()" >
+          用户资料
+  </button> 
+  <button ion-item (click)="openMessage()">
+          消息通知
+  </button> 
+</ion-list>

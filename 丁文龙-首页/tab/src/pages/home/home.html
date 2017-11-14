@@ -1,38 +1,31 @@
 <ion-menu [content]="menuContent">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>菜单</ion-title>
-      </ion-toolbar>
-    </ion-header>
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>菜单</ion-title>
+    </ion-toolbar>
+  </ion-header>
   
-    <ion-content>
-      <ion-list>
-        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+  <ion-content>
+    <ion-list>
+
+      <!-- 侧边栏 -->
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
           {{p.title}}
-        </button>
+      </button>
 
-        <button ion-item  (click)="isShow=!isShow">
-            <ion-list>
-                用户信息
-            <!-- <ion-icon name="ios-arrow-down" item-right  *ngIf="isShow"    (click)="isShow=!isShow"></ion-icon>
-            <ion-icon name="ios-arrow-forward" item-right *ngIf="!isShow" (click)="isShow=!isShow"></ion-icon> -->
-           </ion-list>
-          </button>
-              <ion-list *ngIf="isShow">
-                      <button class="Home-button" ion-item  >
-                          用户资料
-                        </button> 
-                            <button class="Home-button" ion-item >
-                                消息通知
-                              </button> 
-                </ion-list>
-  
-      </ion-list>
-
+      <!-- 下拉栏 -->
+      <align></align>
+     
       
-    </ion-content>
+    </ion-list>    
+  </ion-content>
   
-  </ion-menu>
+</ion-menu>
   
   <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
-  <ion-nav [root]="rootPage" #menuContent swipeBackEnabled="false"></ion-nav>
+<ion-nav [root]="rootPage" #menuContent swipeBackEnabled="false"></ion-nav>
+
+
+
+
+  

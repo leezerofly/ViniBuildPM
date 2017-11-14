@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the OpenDiscussPage page.
+ * Generated class for the UserDataPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-open-discuss',
-  templateUrl: 'open-discuss.html',
+  selector: 'page-user-data',
+  templateUrl: 'user-data.html',
 })
-export class OpenDiscussPage {
+export class UserDataPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad OpenDiscussPage');
+    console.log('ionViewDidLoad UserDataPage');
   }
 
 }
