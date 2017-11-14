@@ -19,39 +19,39 @@ export class ItemsPage {
       // console.log("iiii"+this.i.charNum);
       var charactes = [
         {
-          name: 'Gollum',
+          name: '朱丽叶',
           quote: '2017/11/8',
           //  image: 'assets/imgs/logo.png',
-          items:'与我相关'
+          items:'舌尖上的中国'
         },
         {
-          name: 'Frodo',
+          name: '罗密欧',
           quote: '2014/6/8',
            // image: 'assets/imgs/logo.png',
-          items: '与她相关'
+          items: '单反'
         },
         {
-          name: 'Samwise Gamgee',
+          name: '徐霞客',
           quote: '2017/6/4',
           //  image: 'assets/imgs/logo.png',
-          items:'与你相关'
+          items:'徐霞客游记'
         }, {
-          name: 'Gollum',
+          name: '鲁迅',
           quote: '2017/11/8',
           //  image: 'assets/imgs/logo.png',
-          items:'与我们相关'
+          items:'背影'
         },
         {
-          name: 'Gollum',
+          name: '俞敏洪',
           quote: '2017/11/8',
           //  image: 'assets/imgs/logo.png',
-          items:'与你们相关'
+          items:'新东方'
         },
         {
-          name: 'Gollum',
+          name: '雷军',
           quote: '2017/11/8',
           //  image: 'assets/imgs/logo.png',
-          items:'与他们相关'
+          items:'小米'
         }
 
 
