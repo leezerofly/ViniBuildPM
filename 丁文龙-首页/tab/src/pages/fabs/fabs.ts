@@ -38,14 +38,12 @@ export class Fabs {
     this.navCtrl.push(TaskPage);
   }
 
-openQuestion(){
-    this.navCtrl.push(QuestionPage);
-}
+  openQuestion(){
+      this.navCtrl.push(QuestionPage);
+  }
 
-openDiscuss(){
-  this.navCtrl.push(DiscussPage);
-}
-
-
+  openDiscuss(){
+    this.navCtrl.push(DiscussPage);
+  }
 
 }

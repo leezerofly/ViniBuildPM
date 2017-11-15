@@ -5,12 +5,10 @@ import { IonicPage, NavController, NavParams,Nav } from 'ionic-angular';
 import { NoticePage } from '../notice/notice';
 import {UserDataPage} from '../user-data/user-data';
 import { MeetingPage } from '../meeting/meeting';
-import { TaskPage } from '../task/task';
-
-import { HomePage } from '../home/home';
-
-import { DiscussPage } from '../discuss/discuss';
-import { QuestionPage } from '../question/question';
+// import { TaskPage } from '../task/task';
+// import { HomePage } from '../home/home';
+// import { DiscussPage } from '../discuss/discuss';
+// import { QuestionPage } from '../question/question';
 /**
  * Generated class for the PersonalDataPage page.
  *

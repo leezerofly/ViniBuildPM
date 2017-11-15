@@ -2,11 +2,26 @@
     
 </ion-header>
   
- 
+ <!-- 右下角打开新议题 -->
   <ion-fab class="fabs-button1"  >
-      <button ion-fab color="light" (click) ="openPage()">
-        <ion-icon name="add" ></ion-icon>
-      </button>
+    <button ion-fab color="light" >
+      <ion-icon name="add" ></ion-icon>
+    </button>
+    <ion-fab-list side="top">
+      <button ion-fab color="light"  (click)="openHome()">首页</button>
+      <align></align>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <button ion-fab color="light" (click)="openTask()">任务</button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-fab color="light" (click)="openDiscuss()">讨论</button>
+      <button ion-fab color="light"  (click)="openMeeting()">会议</button>
+      <button ion-button color="light" (click)="openPage()">发布话题</button>     
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-fab color="light" (click)="openQuestion()">问题</button>
+    </ion-fab-list>
   </ion-fab>
   
   <!-- 右侧下拉导航 -->
@@ -22,21 +37,21 @@
     </ion-fab-list>
   </ion-fab> -->
 
-    <!-- 中间导航 -->
-    <ion-fab class="fabs-button2" center middle>
-      <button ion-fab color="light" big><ion-icon name="arrow-dropdown"></ion-icon></button>
-      <ion-fab-list side="top">
-        <button ion-button color="light" (click)="openHome()">首页</button>
-      </ion-fab-list>
-      <ion-fab-list side="bottom">
-        <button ion-button color="light" (click)="openTask()">任务</button>
-        <align></align>
-      </ion-fab-list>
-      <ion-fab-list side="left">
-        <button ion-button color="light" (click)="openDiscuss()">讨论</button>
-      </ion-fab-list>
-      <ion-fab-list side="right">
-        <button ion-button color="light" (click)="openQuestion()">问题</button>
-      </ion-fab-list>
-    </ion-fab>
+  <!-- 中间导航 -->
+  <!-- <ion-fab class="fabs-button2" center middle>
+    <button ion-fab color="light" big><ion-icon name="arrow-dropdown"></ion-icon></button>
+    <ion-fab-list side="top">
+      <button ion-button color="light"  (click)="openHome()">首页</button>
+      <align></align>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <button ion-button color="light" (click)="openTask()">任务</button>
+    </ion-fab-list>
+    <ion-fab-list side="left">
+      <button ion-button color="light" (click)="openDiscuss()">讨论</button>
+    </ion-fab-list>
+    <ion-fab-list side="right">
+      <button ion-button color="light" (click)="openQuestion()">问题</button>
+    </ion-fab-list>
+  </ion-fab> -->
   

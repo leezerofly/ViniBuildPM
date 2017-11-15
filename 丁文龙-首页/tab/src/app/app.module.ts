@@ -9,7 +9,6 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DiscussPage } from '../pages/discuss/discuss';
 import { QuestionPage } from '../pages/question/question';
-// import { OpenDiscussPage } from '../pages/open-discuss/open-discuss';
 import { NoticePage } from '../pages/notice/notice';
 import { PersonalDataPage } from '../pages/personalData/personalData';
 import { CreatTopicPage } from '../pages/creat-topic/creat-topic';
@@ -18,7 +17,7 @@ import {UserDataPage} from '../pages/user-data/user-data';
 
 import { Fabs } from '../pages/fabs/fabs';
 import { Align } from '../pages/align/align';
-
+import { RightIcon } from '../pages/rightIcon/rightIcon';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -33,7 +32,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MeetingPage,
     DiscussPage,
     QuestionPage,
-    // OpenDiscussPage,
     NoticePage,
     PersonalDataPage,
     CreatTopicPage,
@@ -42,7 +40,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     Fabs,
     Align,
-   
+    RightIcon
 
   ],
   imports: [
@@ -58,7 +56,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MeetingPage,
     DiscussPage,
     QuestionPage,
-    // OpenDiscussPage,
     NoticePage,
     PersonalDataPage,
     CreatTopicPage,
@@ -67,7 +64,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
     Fabs,
     Align,
-   
+    RightIcon
 
   ],
   providers: [

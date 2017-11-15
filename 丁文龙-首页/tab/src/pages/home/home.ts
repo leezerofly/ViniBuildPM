@@ -7,8 +7,8 @@ import { TaskPage } from '../task/task';
 import { MeetingPage } from '../meeting/meeting';
 import { DiscussPage } from '../discuss/discuss';
 import { QuestionPage } from '../question/question';
-import { NoticePage } from '../notice/notice';
-import {UserDataPage} from '../user-data/user-data';
+// import { NoticePage } from '../notice/notice';
+// import {UserDataPage} from '../user-data/user-data';
 
 @Component({
   selector: 'page-home',
@@ -28,9 +28,9 @@ export class HomePage {
       this.pages = [
         { title: '首页', component:PersonalDataPage },
         { title: '任务', component: TaskPage },
-       { title: '会议', component:MeetingPage  },
-       { title: '讨论', component: DiscussPage },
-      { title: '问题', component: QuestionPage },
+        { title: '会议', component:MeetingPage  },
+        { title: '讨论', component: DiscussPage },
+        { title: '问题', component: QuestionPage },
       ];
     }
     openPage(page) {
