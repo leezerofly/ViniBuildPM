@@ -21,40 +21,87 @@ export class ContentPage {
         // console.log("iiii"+this.i.charNum);
         var characters = [
           {
-            name: 'Gollum',
-            quote: '2017/11/8',
+            name: '标题一',
+            quote: 'Tom     2017/11/8',
             //  image: 'assets/imgs/logo.png',
             items:'与我相关'
           },
           {
-            name: 'Frodo',
-            quote: '2014/6/8',
+            name: '标题二',
+            quote: 'Gary      2017/11/18',
              // image: 'assets/imgs/logo.png',
             items: '与她相关'
           },
           {
-            name: 'Samwise Gamgee',
-            quote: '2017/6/4',
+            name: '标题三',
+            quote: 'Tom      2017/11/18',
             //  image: 'assets/imgs/logo.png',
             items:'与你相关'
           }, {
-            name: 'Gollum',
-            quote: '2017/11/8',
+            name: '标题四',
+            quote: 'Tom      2017/11/18',
             //  image: 'assets/imgs/logo.png',
             items:'与我们相关'
           },
           {
-            name: 'Gollum',
-            quote: '2017/11/8',
+            name: '标题五',
+            quote: 'Anna      2017/11/18',
             //  image: 'assets/imgs/logo.png',
             items:'与你们相关'
           },
           {
-            name: 'Gollum',
-            quote: '2017/11/8',
+            name: '标题六',
+            quote: 'Alice      2017/10/01',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题七',
+            quote: 'Seven      2017/10/18',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题八',
+            quote: 'Sara      2017/10/18',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题九',
+            quote: 'Ida      2017/11/17',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题十',
+            quote: 'Pernila      2017/11/13',
             //  image: 'assets/imgs/logo.png',
             items:'与他们相关'
           }
+
+
+          ,
+          {
+            name: '标题一',
+            quote: 'Tom      2017/11/18',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题二',
+            quote: 'Tom      2017/11/18',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          },
+          {
+            name: '标题三',
+            quote: 'Pernila      2017/11/13',
+            //  image: 'assets/imgs/logo.png',
+            items:'与他们相关'
+          }
+
+
 
 
         ];

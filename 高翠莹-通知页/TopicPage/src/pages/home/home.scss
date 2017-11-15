@@ -2,23 +2,27 @@ page-home {
 
 .segment-md .segment-button {
 
-        font-family:"Times New Roman";
-        font-size: 15px;
+        font-family:"Serif";
+        font-size: 16px;
         color: #FFF;
+        padding: 5px;
+        text-align:center;
    
     }
 
     .information{
 
         color: #AAA;
-        font-family:"Times New Roman";
-        font-size: 15px;
+        font-family:"Serif";
+        font-size: 10px;
     }
 
 .list {
     position: relative;
-    padding-top: 20px;
+    padding-top: 25px;
     padding-bottom: 20px;
+    font-weight: 40;
+    font-family:"Serif";
     padding-left: 0; // reset padding because ul and ol
     margin-bottom: 20px;
     // background: #ff8
@@ -26,6 +30,10 @@ page-home {
 .item{
     // background: #059
     opacity:0.3;
+    font-family: cursive;
+    font-weight: 40;
+    font-weight: 900;
+    font-size: 20px;
     color: #000
 }
 #petMain{

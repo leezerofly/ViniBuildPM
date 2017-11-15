@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-<div id="first" style="display:block;">
+<div id="first" *ngIf="passwordDis1==true">
   <ion-list>
     <ion-item>
         <progress value="3.3" max="10"></progress>
@@ -23,7 +23,7 @@
 </div>
 
 
-<div id="second" style="display:none;">
+<div id="second" *ngIf="passwordDis2==true">
   <ion-list>
     <ion-item>
         <progress value="6.6" max="10"></progress>
@@ -43,7 +43,7 @@
   </div>
 </div>
 
-<div id="third" style="display:none;text-align:center;">     
+<div id="third" *ngIf="passwordDis3==true">     
     <ion-list>
         <ion-item>  
         <progress value="10" max="10"></progress>
@@ -52,5 +52,8 @@
         <p style="font-size:66px;">修改成功</p>
       </ion-item>
     </ion-list>
+  <div padding>
+    <button ion-button color="light" (click)="toForthStep()" block>返回</button>
+  </div>
 </div>
 </ion-content>

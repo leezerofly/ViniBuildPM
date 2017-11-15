@@ -8,24 +8,33 @@ import { AlertController } from 'ionic-angular';
 })
 export class AboutPage {
 
+  passwordDis1:boolean=true;
+  passwordDis2:boolean=false
+  passwordDis3:boolean=false;
+
 constructor(public alerCtrl: AlertController,public navCtrl: NavController) {
- 
+
 }
 
 
 toSecondStep() {
-  document.getElementById('first').style.display='none';
-  document.getElementById('second').style.display='block';
+  this.passwordDis1=false;
+  this.passwordDis2=true;
 }
 
 toThirdStep() {
-  document.getElementById('second').style.display='none';
-  document.getElementById('third').style.display='block';
+  this.passwordDis2=false;
+  this.passwordDis3=true;
 }
 
 returnFirstStep(){
-  document.getElementById('first').style.display='block';
-  document.getElementById('second').style.display='none';
+  this.passwordDis1=true;
+  this.passwordDis2=false;
+}
+
+toForthStep(){
+  this.passwordDis1=true;
+  this.passwordDis3=false;
 }
 
 }

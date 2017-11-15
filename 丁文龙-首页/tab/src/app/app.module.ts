@@ -9,14 +9,15 @@ import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { DiscussPage } from '../pages/discuss/discuss';
 import { QuestionPage } from '../pages/question/question';
-import { OpenDiscussPage } from '../pages/open-discuss/open-discuss';
+// import { OpenDiscussPage } from '../pages/open-discuss/open-discuss';
 import { NoticePage } from '../pages/notice/notice';
 import { PersonalDataPage } from '../pages/personalData/personalData';
 import { CreatTopicPage } from '../pages/creat-topic/creat-topic';
-import { MenuPage } from '../pages/menu/menu';
+import {UserDataPage} from '../pages/user-data/user-data';
 
 
 import { Fabs } from '../pages/fabs/fabs';
+import { Align } from '../pages/align/align';
 
 
 
@@ -32,14 +33,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MeetingPage,
     DiscussPage,
     QuestionPage,
-    OpenDiscussPage,
+    // OpenDiscussPage,
     NoticePage,
     PersonalDataPage,
     CreatTopicPage,
+    UserDataPage,
 
-    MenuPage,
+
     Fabs,
-
+    Align,
    
 
   ],
@@ -56,14 +58,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     MeetingPage,
     DiscussPage,
     QuestionPage,
-    OpenDiscussPage,
+    // OpenDiscussPage,
     NoticePage,
     PersonalDataPage,
     CreatTopicPage,
+    UserDataPage,
 
-    MenuPage,
+
     Fabs,
-
+    Align,
    
 
   ],

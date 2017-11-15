@@ -7,12 +7,16 @@ import { TaskPage } from '../task/task';
 import { MeetingPage } from '../meeting/meeting';
 import { DiscussPage } from '../discuss/discuss';
 import { QuestionPage } from '../question/question';
+import { NoticePage } from '../notice/notice';
+import {UserDataPage} from '../user-data/user-data';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
+
   @ViewChild(Nav) nav: Nav;
   
     rootPage: any =PersonalDataPage;
@@ -22,7 +26,7 @@ export class HomePage {
     constructor(public navCtrl: NavController) {
       // used for an example of ngFor and navigation
       this.pages = [
-        { title: '首页', component: HomePage },
+        { title: '首页', component:PersonalDataPage },
         { title: '任务', component: TaskPage },
        { title: '会议', component:MeetingPage  },
        { title: '讨论', component: DiscussPage },
@@ -34,5 +38,5 @@ export class HomePage {
       // we wouldn't want the back button to show in this scenario
       this.nav.setRoot(page.component);
     }
-  
+
   }

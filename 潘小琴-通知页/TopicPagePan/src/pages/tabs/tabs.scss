@@ -1,0 +1,29 @@
+page-tabs{
+
+    .mortgagetab.tabs{  
+        top:0;  
+        border:0;  
+        background:none;  
+      
+    }  
+    .mortgagetab.tab-item {  
+        max-width:220px;  
+    }  
+        .mortgagetab .tabs a:nth-child(odd) {  
+            border-right:1px solid #ea5504;  
+        }  
+        .mortgagetab .tabs .tab-item-active {  
+            background:#ea5504;  
+        }  
+        .mortgagetab .tabs .tab-item-active > span {  
+            color:#fff;   
+        }  
+    .mortgagetab .has-tabs-top {  
+        top:50px;  
+    }  
+    .tabbar.show-tabbar {
+        opacity: 1;
+
+    }
+    
+}

@@ -39,69 +39,69 @@
       <div [ngSwitch]="TopicPet">
         <ion-list *ngSwitchCase="'createTopic'" class="listPet">
           <ion-item (click)="openModal(0)">
-            <h2>Game</h2>
+            <h2>美食</h2>
             <span class="information">Tom 2017/11/11</span>
           </ion-item>
-          <ion-item >
-            <h2>Oscar</h2>
+          <ion-item (click)="openModal(1)" >
+            <h2>摄影</h2>
             <span class="information">Tom 2017/11/11</span>
           </ion-item >
-          <ion-item>
-            <h2>Zoey</h2>
+          <ion-item (click)="openModal(2)">
+            <h2>旅游</h2>
             <span class="information">Tom 2017/11/11</span>
           </ion-item>
-          <ion-item >
-            <h2>Otto</h2>
+          <ion-item (click)="openModal(3)">
+            <h2>写作</h2>
             <span class="information">Tom 2017/11/11</span>
           </ion-item>
-          <ion-item >
-              <h2>Otto</h2>
+          <ion-item  (click)="openModal(4)">
+              <h2>英语</h2>
               <span class="information">Tom 2017/11/11</span>
           </ion-item>
         </ion-list>
        
         <ion-list *ngSwitchCase="'participateTopic'"  class="listPet">
-          <ion-item (click)="openModal(1)">
-              <h2>Luna</h2>
-              <span class="information">Tom 2017/11/11</span>
-          </ion-item>
-          <ion-item (click)="openModal(2)">
-              <h2>Milo</h2>
-              <span class="information">Tom 2017/11/11</span>
-          </ion-item>
-          <ion-item (click)="openModal(3)">
-              <h2>Bandit</h2>
-              <span class="information">Tom 2017/11/11</span>
-          </ion-item>
-          <ion-item (click)="openModal(4)">
-            <h2>Nala</h2>
+            <ion-item (click)="openModal(2)">
+                <h2>旅游</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item (click)="openModal(3)">
+                <h2>写作</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item  (click)="openModal(4)">
+                  <h2>英语</h2>
+                  <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+          <ion-item (click)="openModal(0)">
+            <h2>美食</h2>
             <span class="information">Tom 2017/11/11</span>
-            </ion-item>
-          <ion-item >
-              <h2>Otto</h2>
-              <span class="information">Tom 2017/11/11</span>
           </ion-item>
+          <ion-item (click)="openModal(1)" >
+            <h2>摄影</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
         </ion-list>
        
         <ion-list *ngSwitchCase="'collectTopic'"  class="listPet">
-          <ion-item>
-            <h2>Daffy</h2>
+          <ion-item (click)="openModal(0)">
+            <h2>美食</h2>
             <span class="information">Tom 2017/11/11</span>
           </ion-item>
-          <ion-item>
-            <h2>Huey</h2>
-            <span class="information">Tom 2017/11/11</span>
+          <ion-item  (click)="openModal(4)">
+              <h2>英语</h2>
+              <span class="information">Tom 2017/11/11</span>
           </ion-item>
-          <ion-item>
-            <h2>Dewey</h2>
-            <span class="information">Tom 2017/11/11</span>
-          </ion-item>
-          <ion-item>
-            <h2>Louie</h2>
-            <span class="information">Tom 2017/11/11</span>
-          </ion-item>
-          <ion-item >
-              <h2>Otto</h2>
+          <ion-item (click)="openModal(1)" >
+              <h2>摄影</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item >
+            <ion-item (click)="openModal(2)">
+              <h2>旅游</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item (click)="openModal(3)">
+              <h2>写作</h2>
               <span class="information">Tom 2017/11/11</span>
             </ion-item>
         </ion-list>
@@ -150,14 +150,7 @@
               </ion-list>
              
               <ion-list *ngSwitchCase="'InformList'"  class="listPet">
-                    <ion-item (click)="openModal(0)">
-                        <h2>Game</h2>
-                        <span class="information">Tom 2017/11/11</span>
-                      </ion-item>
-                      <ion-item >
-                        <h2>Oscar</h2>
-                        <span class="information">Tom 2017/11/11</span>
-                      </ion-item >
+                    
                       <ion-item>
                         <h2>Zoey</h2>
                         <span class="information">Tom 2017/11/11</span>
@@ -166,6 +159,14 @@
                         <h2>Otto</h2>
                         <span class="information">Tom 2017/11/11</span>
                       </ion-item>
+                      <ion-item (click)="openModal(0)">
+                          <h2>Game</h2>
+                          <span class="information">Tom 2017/11/11</span>
+                        </ion-item>
+                        <ion-item >
+                          <h2>Oscar</h2>
+                          <span class="information">Tom 2017/11/11</span>
+                        </ion-item >
                       <ion-item >
                           <h2>Otto</h2>
                           <span class="information">Tom 2017/11/11</span>
@@ -178,14 +179,6 @@
                       <span class="information">Tom 2017/11/11</span>
                     </ion-item>
                     <ion-item >
-                      <h2>Oscar</h2>
-                      <span class="information">Tom 2017/11/11</span>
-                    </ion-item >
-                    <ion-item>
-                      <h2>Zoey</h2>
-                      <span class="information">Tom 2017/11/11</span>
-                    </ion-item>
-                    <ion-item >
                       <h2>Otto</h2>
                       <span class="information">Tom 2017/11/11</span>
                     </ion-item>
@@ -193,6 +186,14 @@
                         <h2>Otto</h2>
                         <span class="information">Tom 2017/11/11</span>
                     </ion-item>
+                    <ion-item >
+                        <h2>Oscar</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item >
+                      <ion-item>
+                        <h2>Zoey</h2>
+                        <span class="information">Tom 2017/11/11</span>
+                      </ion-item>
               </ion-list>
       
             </div>

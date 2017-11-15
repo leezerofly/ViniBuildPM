@@ -1,32 +1,26 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Home Page</ion-title>
-  </ion-navbar>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" >
 </ion-header>
 
-<ion-content>
-    <div id="case1">
-      标题：
-      <input type="text" id="topic">
-    </div>
+<ion-content class="p-3 mb-2 bg-light text-dark">
+  <input type="text" id="topic" placeholder="标题" class="border border-info" readonly>
 
-    <div id="case2">
-      <label for="variety" class="label2">类别：</label>
-      <input type="text" id="variety">
+  <div id="case">
+    <label for="variety">类别：</label>
+    <input type="text" id="variety" class="border border-light" readonly>
 
-      <label for="level" class="label2">优先级：</label>
-      <input type="text" id="level">
+    <label for="level">优先级：</label>
+    <input type="text" id="level" class="border border-light" readonly>
 
-      <label for="who" class="label2">指派给：</label>
-      <input type="text" id="who">
-    </div>
+    <label for="who">指派给：</label>
+    <input type="text" id="who" readonly>
+  </div>
 
+  <textarea  id="content" class="border border-info">
+  </textarea>
 
-    <textarea  id="content">
-    </textarea>
+  <button type="button" onclick="" id="edit" class="btn btn-info">编辑</button>
+  <button type="button" onclick="" id="delect" class="btn btn-info">删除</button>
+  <button type="button" onclick="" id="answer" class="btn btn-info">回复</button>
 
-    <button type="button" onclick="" id="edit">编辑</button>
-    <button type="button" onclick="" id="delect">删除</button>
-    <button type="button" onclick="" id="answer">回复</button>
-  
 </ion-content>
