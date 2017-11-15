@@ -1,43 +1,41 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>Message Page</ion-title>
-  </ion-navbar>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" >
 </ion-header>
 
-<ion-content>
-  <form id="form">
-    <div id="case1">
-      <label for="topic"  id="label1">标题：</label>
-      <input type="text" id="topic" value="">
-    </div>
+<ion-content class="p-3 mb-2 bg-light text-dark">
+  <form>
+    <input type="text" id="topic" value="" class="form-control form-control-lg border border-info" placeholder="标题">
 
-    <div id="case2">
-      <label for="variety" class="label2">类别：</label>
-      <select id="variety" class="case">
+    <div id="case" class="border-bottom border-info">
+      <label for="variety" class="label">类别：</label>
+      <select id="variety" class="form-control border-right border-info">
         <option value="0">任务</option>
         <option value="1">会议</option>
         <option value="2">讨论</option>
         <option value="3">问题</option>
       </select>
 
-      <label for="level" class="label2">优先级：</label>
-      <select id="level" class="case">
+      <label for="level" class="label">优先级：</label>
+      <select id="level" class="form-control border-right border-info">
       <option value="0">最高</option>
         <option value="1">高</option>
         <option value="2">中</option>
         <option value="3">低</option>
       </select>
    
-      <label for="who" class="label2">指派给：</label>
-      <select id="who" class="case">
-        <option value=""></option>
+      <label for="who" class="label">指派给：</label>
+      <select id="who" class="form-control">
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
       </select>
     </div>
 
+   <textarea id="content" placeholder="write down your content" class="border border-info"></textarea>
 
-    <textarea  id="content">
-    </textarea>
+    <button type="submit" value="submit" class="btn btn-success btn-lg">确认发布</button>
+  </form> 
 
-    <button type="submit" value="submit">确认发布</button>
-  </form>  
 </ion-content>
+
