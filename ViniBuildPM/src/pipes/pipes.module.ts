@@ -1,11 +1,9 @@
 import { NgModule } from '@angular/core';
-import { ViniPipe } from './vini/vini';
-import { ViniBuildPipe } from './vini-build/vini-build';
+
+import { TranslatePipe } from './translate/translate';
 @NgModule({
-	declarations: [ViniPipe,
-    ViniBuildPipe],
+	declarations: [TranslatePipe],
 	imports: [],
-	exports: [ViniPipe,
-    ViniBuildPipe]
+	exports: [TranslatePipe]
 })
 export class PipesModule {}

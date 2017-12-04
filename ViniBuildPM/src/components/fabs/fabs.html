@@ -1,22 +1,6 @@
-<!-- Generated template for the FabsComponent component -->
-<!-- 右下角打开新议题 -->
+<!-- 发布话题 按钮 -->
 <ion-fab class="fabs-button"  >
-  <button ion-fab color="light" >
+  <button ion-fab color="light" (click)="creatTopicPage()">
     <ion-icon name="add" ></ion-icon>
   </button>
-  <ion-fab-list side="top">
-    <button ion-fab color="light"  (click)="openHome()">首页</button>
-    <!-- <align></align> -->
-  </ion-fab-list>
-  <ion-fab-list side="bottom">
-    <button ion-fab color="light" (click)="openTask()">任务</button>
-  </ion-fab-list>
-  <ion-fab-list side="left">
-    <button ion-fab color="light" (click)="openDiscuss()">讨论</button>
-    <button ion-fab color="light"  (click)="openMeeting()">会议</button>
-    <button ion-button color="light" (click)="openPage()">发布话题</button>     
-  </ion-fab-list>
-  <ion-fab-list side="right">
-    <button ion-fab color="light" (click)="openQuestion()">问题</button>
-  </ion-fab-list>
 </ion-fab>

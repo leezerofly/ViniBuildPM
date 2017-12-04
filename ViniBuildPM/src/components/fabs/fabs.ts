@@ -17,27 +17,7 @@ export class FabsComponent {
     console.log('Hello FabsComponent Component');
   }
 
-  openPage(){
+  creatTopicPage(){
     this.navCtrl.push('CreatTopicPage');
-  }
-
-  openMeeting(){
-    this.navCtrl.push('MeetingPage');
-  }
-
-  openHome(){
-    this.navCtrl.push('PersonalDataPage'); 
-  }
-
-  openTask(){
-    this.navCtrl.push('TaskPage');
-  }
-
-  openQuestion(){
-      this.navCtrl.push(QuestionPage);
-  }
-
-  openDiscuss(){
-    this.navCtrl.push(DiscussPage);
   }
 }
