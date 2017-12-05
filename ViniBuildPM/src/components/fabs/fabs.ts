@@ -18,6 +18,6 @@ export class FabsComponent {
   }
 
   creatTopicPage(){
-    this.navCtrl.push('CreatTopicPage');
+    this.navCtrl.push('topic-create');
   }
 }

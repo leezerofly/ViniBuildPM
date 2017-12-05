@@ -1,0 +1,74 @@
+topic-create {
+  button:active {
+    background-color: #3e8e41;
+    transform: translateY(4px);
+  }
+  label {
+    font-size: 20px;font-style: normal;
+  }
+  #topic {
+    margin-left: 20%;margin-right: 20%;margin-top: 5%;margin-bottom: 10px;
+    width: 60%;height: 5%;
+    border-radius: 4px;
+    overflow: ellipsis; 
+    display: inline-block;
+  }
+  #case {
+    margin-left: 22%;margin-right: 20%;margin-top: 5%;margin-bottom: 10px;
+  }
+  #variety,#level {
+    width: 20%;
+    margin-right: 1%;
+    border-top:none;border-left:none;border-bottom:none; 
+  }
+
+  #who {
+    width: auto;
+    border:none;
+  }
+
+  #content {
+    margin-left: 25%;margin-right: 25%;margin-top: 2%;
+    width: 50%;
+    height: 5cm;
+    padding: 5px;
+    overflow: auto;
+    border-radius: 6px;
+  }
+
+  #edit {
+    margin-left: 30%;margin-top: 1%;
+    height: 1cm;width: 10%;
+    text-align: center;
+    border:none;
+    float: left;
+    border-radius: 8px;
+    background-color: #008CBA;
+    font-size: 16px;
+    box-shadow: 0 3px #999;
+  }
+ 	#delect {
+ 		margin-top: 1%;
+    height: 1cm;width: 10%;
+    border:none;
+    position:relative;
+		left: 20px;
+ 		float: left;
+ 		border-radius: 8px;
+ 		background-color: #008CBA;
+ 		font-size: 16px;
+ 		box-shadow: 0 3px #999;
+ 	}
+ 	#answer {
+ 		margin-top: 1%;
+    height: 1cm;width: 10%;
+    border:none;
+    position:relative;
+		left: 40px;
+ 		float: left;
+ 		border-radius: 8px;
+ 		background-color: #008CBA;
+ 		font-size: 16px;
+ 		box-shadow: 0 3px #999;
+	}
+}
