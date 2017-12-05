@@ -1,19 +1,13 @@
 import { Component } from '@angular/core';
-import { MenuController, NavController } from 'ionic-angular';
+import { App, MenuController, NavController } from 'ionic-angular';
 
-/**
- * Generated class for the MenuComponent component.
- *
- * See https://angular.io/api/core/Component for more info on Angular
- * Components.
- */
 @Component({
   selector: 'menu',
   templateUrl: 'menu.html'
 })
 export class MenuComponent {
-  constructor(public navCtrl: NavController, public menuCtrl: MenuController) {
-    this.navCtrl.setRoot('HomePage');
+  constructor(app: App,public menuCtrl: MenuController) {
+    menuCtrl.enable(true);
   }
 
   openMenu() {

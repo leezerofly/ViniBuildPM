@@ -14,7 +14,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'discuss.html',
 })
 export class DiscussPage {
-
+  title: any = '讨论'
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
