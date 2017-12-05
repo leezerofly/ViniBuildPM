@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { App, MenuController, NavController } from 'ionic-angular';
 
 @Component({
@@ -6,6 +6,7 @@ import { App, MenuController, NavController } from 'ionic-angular';
   templateUrl: 'menu.html'
 })
 export class MenuComponent {
+  // @Input() title: string;
   constructor(app: App,public menuCtrl: MenuController) {
     menuCtrl.enable(true);
   }

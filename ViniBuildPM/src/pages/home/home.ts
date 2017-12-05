@@ -8,9 +8,9 @@ import { NavController, IonicPage, Nav } from 'ionic-angular';
   templateUrl: 'home.html'
 })
 export class HomePage {
-  @ViewChild(Nav) nav: Nav;
-  
-    constructor(public navCtrl: NavController) {
+  title: string = '首页'
 
-    }
+  constructor(public navCtrl: NavController) {
+
+  }
 }
