@@ -1,0 +1,46 @@
+page-notification {
+  .segment-md .segment-button {
+    font-family:"Serif";
+    font-size: 16px;
+    color: #FFF;
+    padding: 5px;
+    text-align:center; 
+  }
+
+  .information{
+    color: #AAA;
+    font-family:"Serif";
+    font-size: 10px;
+  }
+  
+  .list {
+    position: relative;
+    padding-top: 25px;
+    padding-bottom: 20px;
+    font-weight: 40;
+    font-family:"Serif";
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  .item{
+    opacity:0.3;
+    font-family: cursive;
+    font-weight: 40;
+    font-weight: 900;
+    font-size: 20px;
+    color: #000
+  }
+
+  #petMain{
+    background:
+    -webkit-gradient(linear,
+    0% 0%,
+    100% 0%,
+    from(#141e30),
+    to(#243b55))
+    !important;
+    opacity: 0.95;
+    font-style: {color: #FFF}
+  }
+}

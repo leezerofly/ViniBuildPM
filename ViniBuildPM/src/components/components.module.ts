@@ -4,11 +4,13 @@ import { IonicModule } from 'ionic-angular';
 import { PipesModule } from '../pipes/pipes.module';
 import { FabsComponent } from './fabs/fabs';
 import { NavbarComponent } from './navbar/navbar';
+import { ListComponent } from './list/list';
 
 @NgModule({
 	declarations: [
         FabsComponent,
-        NavbarComponent
+        NavbarComponent,
+        ListComponent
     ],
     imports: [
         IonicModule,
@@ -16,7 +18,8 @@ import { NavbarComponent } from './navbar/navbar';
     ],
 	exports: [
         FabsComponent,
-        NavbarComponent
+        NavbarComponent,
+        ListComponent
     ]
 })
 export class ComponentsModule {}

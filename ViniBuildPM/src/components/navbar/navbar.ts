@@ -17,14 +17,12 @@ export class NavbarComponent {
   constructor(public nav: Nav,public navCtrl: NavController, public actionsheetCtrl: ActionSheetController) {
     this.pages = [
       { title: '个人资料', component: 'UserPage' },
-      { title: '消息通知', component: 'TaskPage' },
+      { title: '消息通知', component: 'NotificationPage' },
       { title: '打卡系统', component: 'MeetingPage' }
     ]
   }
 
   openPage(page) {
     this.navCtrl.push(page.component)
-    // this.navCtrl.setRoot(page.component)
-    // this.navCtrl.goToRoot(page.component)
   }
 }

@@ -1,0 +1,263 @@
+<ion-header>
+  <ion-navbar id="bar">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title style="text-align:center">消息通知</ion-title>
+  </ion-navbar>
+
+  <ion-segment [(ngModel)]="pet">
+    <ion-segment-button value="MyTopic">
+      我的话题
+    </ion-segment-button>
+    <ion-segment-button value="MyMessage">
+      我的消息列表
+    </ion-segment-button>
+  </ion-segment>
+</ion-header>
+  
+<ion-content padding id="petMain">
+  <div [ngSwitch]="pet">
+   <div *ngSwitchCase="'MyTopic'">
+
+      <ion-segment [(ngModel)]="TopicPet">
+        <ion-segment-button value="createTopic">
+          我创建的话题
+        </ion-segment-button>
+        <ion-segment-button value="participateTopic">
+          我参与的话题
+        </ion-segment-button>
+        <ion-segment-button value="collectTopic">
+          我收藏的话题
+        </ion-segment-button>
+      </ion-segment>
+      
+      <div [ngSwitch]="TopicPet">
+        <ion-list *ngSwitchCase="'createTopic'" class="listPet">
+          <ion-item (click)="openModal(0)">
+            <h2>美食</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(1)" >
+            <h2>摄影</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
+          <ion-item (click)="openModal(2)">
+            <h2>旅游</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(3)">
+            <h2>写作</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item  (click)="openModal(4)">
+              <h2>英语</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'participateTopic'"  class="listPet">
+            <ion-item (click)="openModal(2)">
+                <h2>旅游</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item (click)="openModal(3)">
+                <h2>写作</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item  (click)="openModal(4)">
+                  <h2>英语</h2>
+                  <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+          <ion-item (click)="openModal(0)">
+            <h2>美食</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(1)" >
+            <h2>摄影</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'collectTopic'"  class="listPet">
+          <ion-item (click)="openModal(0)">
+            <h2>美食</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item  (click)="openModal(4)">
+              <h2>英语</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(1)" >
+              <h2>摄影</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item >
+            <ion-item (click)="openModal(2)">
+              <h2>旅游</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item (click)="openModal(3)">
+              <h2>写作</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+        </ion-list>
+
+      </div>
+    </div>
+
+    <div *ngSwitchCase="'MyMessage'">
+      <ion-segment [(ngModel)]="MessagePet">
+        <ion-segment-button value="MessageList">
+          私信
+        </ion-segment-button>
+        <ion-segment-button value="InformList">
+          通知
+        </ion-segment-button>
+        <ion-segment-button value="AttentionList">
+          关注
+        </ion-segment-button>
+      </ion-segment>
+
+      <div [ngSwitch]="MessagePet">
+          <ion-list *ngSwitchCase="'MessageList'"  class="listPet">
+            <ion-item (click)="openModal(0)">
+                <h2>Game</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item >
+                <h2>Oscar</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item >
+              <ion-item>
+                <h2>Zoey</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item >
+                <h2>Otto</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item >
+                  <h2>Otto</h2>
+                  <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+          </ion-list>
+          
+          <ion-list *ngSwitchCase="'InformList'"  class="listPet">            
+            <ion-item>
+              <h2>Zoey</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item (click)="openModal(0)">
+                <h2>Game</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item>
+              <ion-item >
+                <h2>Oscar</h2>
+                <span class="information">Tom 2017/11/11</span>
+              </ion-item >
+            <ion-item >
+                <h2>Otto</h2>
+                <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+          </ion-list>
+          
+          <ion-list *ngSwitchCase="'AttentionList'"  class="listPet">
+            <ion-item (click)="openModal(0)">
+              <h2>Game</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Oscar</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item >
+            <ion-item>
+              <h2>Zoey</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+        </ion-list>
+
+        <ion-list *ngSwitchCase="'MessageList'"  class="listPet">
+          <ion-item (click)="openModal(0)">
+              <h2>Game</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Oscar</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item >
+            <ion-item>
+              <h2>Zoey</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+            <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+            </ion-item>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'InformList'"  class="listPet">
+          <ion-item>
+            <h2>Zoey</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Otto</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item (click)="openModal(0)">
+            <h2>Game</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Oscar</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
+          <ion-item >
+            <h2>Otto</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+        </ion-list>
+        
+        <ion-list *ngSwitchCase="'AttentionList'"  class="listPet">
+          <ion-item (click)="openModal(0)">
+            <h2>Game</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Otto</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+              <h2>Otto</h2>
+              <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+          <ion-item >
+            <h2>Oscar</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item >
+          <ion-item>
+            <h2>Zoey</h2>
+            <span class="information">Tom 2017/11/11</span>
+          </ion-item>
+        </ion-list>
+  
+      </div>
+    </div>
+  </div>
+</ion-content>
