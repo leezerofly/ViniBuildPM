@@ -7,7 +7,7 @@ import { ActionSheetController, NavController, Nav } from 'ionic-angular';
   templateUrl: 'navbar.html'
 })
 export class NavbarComponent {
-  // rootPage = 'HomePage'
+  @Input() rootPage: any
 
   @Input() title: string
 
@@ -18,7 +18,7 @@ export class NavbarComponent {
     this.pages = [
       { title: '个人资料', component: 'UserPage' },
       { title: '消息通知', component: 'NotificationPage' },
-      { title: '打卡系统', component: 'MeetingPage' }
+      { title: '打卡系统', component: '' }
     ]
   }
 
