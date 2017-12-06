@@ -14,11 +14,13 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'tabs.html',
 })
 export class TabsPage {
-  homeRoot = 'HomePage' ;
-  taskRoot = 'TaskPage';
-  meetingRoot = 'MeetingPage';
-  discussRoot = 'DiscussPage';
-  questionRoot = 'QuestionPage';
+  title: any = 'test'
+  
+  homeRoot = 'HomePage'
+  taskRoot = 'TaskPage'
+  meetingRoot = 'MeetingPage'
+  discussRoot = 'DiscussPage'
+  questionRoot = 'QuestionPage'
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }

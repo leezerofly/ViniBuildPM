@@ -1,28 +1,31 @@
 import { Component, Input } from '@angular/core';
 
-import { ActionSheetController, Nav } from 'ionic-angular';
+import { ActionSheetController, NavController, Nav } from 'ionic-angular';
 
 @Component({
   selector: 'navbar',
   templateUrl: 'navbar.html'
 })
 export class NavbarComponent {
-  @Input() title: string;
+  // rootPage = 'HomePage'
 
-  pages: Array<{title: string, component: any}>;
+  @Input() title: string
 
-  constructor(public nav: Nav, public actionsheetCtrl: ActionSheetController) {
+  username: any = 'username'
+  pages: Array<{title: string, component: any}>
+
+  constructor(public nav: Nav,public navCtrl: NavController, public actionsheetCtrl: ActionSheetController) {
     this.pages = [
-      { title: '首页', component: 'HomePage' },
-      { title: '任务', component: 'TaskPage' },
-      { title: '会议', component: 'MeetingPage' },
-      { title: '讨论', component: 'DiscussPage' },
-      { title: '问题', component: 'QuestionPage' },
+      { title: '个人资料', component: 'HomePage' },
+      { title: '消息通知', component: 'TaskPage' },
+      { title: '打卡系统', component: 'MeetingPage' }
     ]
   }
 
   openPage(page) {
-    this.nav.setRoot(page.component);
+    this.navCtrl.push(page.component)
+    this.navCtrl.setRoot(page.component)
+    // this.navCtrl.goToRoot(page.component)
   }
   
   openMenu() {

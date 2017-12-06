@@ -1,5 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController, IonicPage, Nav } from 'ionic-angular';
+import { Component } from '@angular/core';
+import { NavController, IonicPage } from 'ionic-angular';
 // import { AppProvider, AppGlobal } from '../../providers/app/app';
 
 @IonicPage()
