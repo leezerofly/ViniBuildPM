@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>个人资料</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div padding>
+    <ion-segment [(ngModel)]="user">
+      <ion-segment-button value="userinfo">
+        基本信息
+      </ion-segment-button>
+      <ion-segment-button value="changePwd">
+        修改密码
+      </ion-segment-button>
+      <ion-segment-button value="changeProtect">
+        修改密保
+      </ion-segment-button>
+    </ion-segment>
+  </div>
+  
+  <div [ngSwitch]="user">
+    <ion-list *ngSwitchCase="'userinfo'">
+      <userinfo></userinfo>
+    </ion-list>
+  
+    <ion-list *ngSwitchCase="'changePwd'">
+      <changePwd></changePwd>
+    </ion-list>
+
+    <ion-list *ngSwitchCase="'changeProtect'">
+      <changeProtect></changeProtect>
+    </ion-list>
+  </div>
+</ion-content>

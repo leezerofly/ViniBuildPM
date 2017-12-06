@@ -1,0 +1,51 @@
+<div id="first" *ngIf="passwordDis1==true">
+  <ion-list>
+    <ion-item>
+      <progress value="3.3" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <ion-label>验证旧密码</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="light" (click)="toSecondStep()" block>确认</button>
+  </div>
+</div>
+
+<div id="second" *ngIf="passwordDis2==true">
+  <ion-list>
+    <ion-item>
+      <progress value="6.6" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <ion-label>输入新密码</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>确认新密码</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="light" (click)="toThirdStep()" block>确认修改</button>
+    <button ion-button color="light" (click)="returnFirstStep()" block>取消修改</button>
+  </div>
+</div>
+
+<div id="third" *ngIf="passwordDis3==true">     
+  <ion-list>
+    <ion-item>  
+      <progress value="10" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <p style="font-size:66px;">修改成功</p>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="light" (click)="toForthStep()" block>返回</button>
+  </div>
+</div>

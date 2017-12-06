@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
-import {IonicModule} from 'ionic-angular';
+import { IonicModule } from 'ionic-angular';
 
 import { PipesModule } from '../pipes/pipes.module';
 import { FabsComponent } from './fabs/fabs';
 import { NavbarComponent } from './navbar/navbar';
 
 @NgModule({
-	declarations: [FabsComponent,
-    NavbarComponent],
-	imports: [PipesModule,IonicModule],
-	exports: [FabsComponent,
-    NavbarComponent]
+	declarations: [
+        FabsComponent,
+        NavbarComponent
+    ],
+    imports: [
+        IonicModule,
+        PipesModule
+    ],
+	exports: [
+        FabsComponent,
+        NavbarComponent
+    ]
 })
 export class ComponentsModule {}

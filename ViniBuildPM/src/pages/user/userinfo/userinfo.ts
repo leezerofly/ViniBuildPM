@@ -2,16 +2,15 @@ import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({
-  selector: 'fabs',
-  templateUrl: 'fabs.html'
+  selector: 'userinfo',
+  templateUrl: 'userinfo.html'
 })
-export class FabsComponent {
+export class Userinfo {
+
+  gender: string[];  
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    console.log('Hello FabsComponent Component');
+    this.gender=["性别","男","女"]
   }
 
-  creatTopicPage(){
-    this.navCtrl.push('topic-create');
-  }
 }

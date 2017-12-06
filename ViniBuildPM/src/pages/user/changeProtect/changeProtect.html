@@ -1,0 +1,75 @@
+<div id="firstStep" *ngIf="tokenDis1==true">
+  <ion-list>
+    <ion-item>
+      <progress value="3.3" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <select>
+        <option *ngFor="let u of sel0" (click)="setClassify(u)">{{u}}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-label>验证密保问题</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="light" (click)="doSecondStep()" block>下一步</button>
+  </div>
+</div>
+
+<div id="secondStep" *ngIf="tokenDis2==true">
+  <ion-list>
+    <ion-item>
+      <progress value="6.6" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <select>
+        <option *ngFor="let u of sel1" (click)="setClassify(u)">{{u}}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-label>输入问题答案</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <select>
+        <option *ngFor="let u of sel2" (click)="setClassify(u)">{{u}}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-label>输入问题答案</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+    <ion-item>
+      <select>
+          <option *ngFor="let u of sel3" (click)="setClassify(u)">{{u}}</option>
+      </select>
+    </ion-item>
+    <ion-item>
+      <ion-label>输入问题答案</ion-label>
+      <ion-input type="text" value=""></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button color="light" (click)="doThirdStep()" block>确认</button>
+    <button ion-button color="light" (click)="returnFirstStep()" block>取消</button>
+  </div>
+</div>
+
+<div id="thirdStep" *ngIf="tokenDis3==true">     
+  <ion-list>
+    <ion-item>  
+      <progress value="10" max="10"></progress>
+    </ion-item>
+    <ion-item>
+      <p style="font-size:66px;">修改成功</p>
+    </ion-item>
+  </ion-list>
+  
+  <div padding>
+    <button ion-button color="light" (click)="doForthStep()" block>返回</button>
+  </div>
+</div>
