@@ -21,3 +21,8 @@
 大家将问题记录在自己文件夹内的md文件内，如`李振飞-首页-开发问题.md`
 
 关于markdown（md）的语法：http://www.jianshu.com/p/bd554bcd0eaf
+
+### ViniBuildPM
+大家的小房子已经整合在一起，变成一座大房子了。
+
+在文件夹ViniBuildPM里面，大家有空可以看一下。

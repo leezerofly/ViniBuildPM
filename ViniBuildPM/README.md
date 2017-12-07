@@ -1,1 +1,21 @@
-### :point_right: This starter repo has moved to the [ionic-team/starters](https://github.com/ionic-team/starters/tree/master/ionic-angular/official/blank) repo! :point_left:
+## 描述
+这就是大家一砖一瓦垒起来的小房子。
+
+在最大限度地尊重大家的代码的基础上，由我重构整合而成。虽然现在还未完成，但确实已经有了雏形。
+
+不得不说，总觉得整合大家的代码比我自己重写一个还累。
+
+所以还是希望大家能更注重一些代码规范问题。
+
+另外，不要为了解决某个问题，用非常奇葩的方式把它堆出来，再多去深入地去查资料，去了解，问题总归是能真正解决的。
+
+## 注意事项
+本项目使用了ionic3的新特性lazy loading，性能有了较大的进步，但因为国内镜像更新不及时，第一次运行时不能使用cnpm install，必须使用npm install，因此需要翻墙。
+
+不过即使翻墙也得看运气，npm install的成功率很低。
+
+为了不必翻墙，我上传了一次node modules（超过100M），所以大家git clone的时候会有些慢。
+
+不过即使如此，，，其实，，，还是有可能跑不起来。
+
+只能祝大家好运了，2333333333
