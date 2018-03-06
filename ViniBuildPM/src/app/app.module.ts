@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { MyApp } from './app.component';
 import { AppProvider } from '../providers/app/app';
 
+
 @NgModule({
   declarations: [
     MyApp
