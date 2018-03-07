@@ -7,6 +7,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'user.html',
 })
 export class UserPage {
+
+  user : string = "userinfo"
   
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
