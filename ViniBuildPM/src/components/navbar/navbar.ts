@@ -18,7 +18,7 @@ export class NavbarComponent {
     this.pages = [
       { title: '个人资料', component: 'UserPage' },
       { title: '消息通知', component: 'NotificationPage' },
-      { title: '打卡系统', component: 'ClockPage' }
+      { title: '打卡系统', component: '' }
     ]
   }
 

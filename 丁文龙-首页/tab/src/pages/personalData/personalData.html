@@ -1,20 +1,28 @@
 <ion-header>
-  <ion-navbar>                
+  <ion-navbar>    
+               
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
-    </button> 
-    <div class="div-header">
-        <ion-title class="title-text">
-          首页
-          <rightIcon></rightIcon> 
-        </ion-title>               
-    </div>       
+    </button>
+          
+    <ion-title>
+      首页 
+      <!-- 右上角图标 -->
+      <!-- <button ion-button  class="button-inner1" clear icon-only (click) ="openPage1()" >
+        <ion-icon  name="person"></ion-icon>
+      </button>
+      <button ion-button class="button-inner2" clear icon-only (click) ="openPage2()" >
+        <ion-icon  name="chatbubbles"></ion-icon>
+      </button>               -->
+      <rightIcon></rightIcon>
+    </ion-title>  
+
   </ion-navbar>    
 </ion-header>
   
 <ion-content padding>  
 
-  <!-- 初始页面议题 改用for循环-->
+  <!-- 初始页面议题 -->
   <ion-list >
     <button class="Home-button" ion-item (click) ="openModa()">
       <h1>议题1</h1>
