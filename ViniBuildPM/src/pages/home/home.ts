@@ -2,12 +2,15 @@ import { Component } from '@angular/core';
 import { NavController, IonicPage } from 'ionic-angular';
 // import { AppProvider, AppGlobal } from '../../providers/app/app';
 
+
+
 @IonicPage()
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
+
   title: string = '首页'
   items:any = [
     'Pokémon Yellow',
@@ -29,7 +32,10 @@ export class HomePage {
     'Halo'
   ]
 
-  constructor(public navCtrl: NavController) {
-    // this.navCtrl.setRoot('TabsPage')
-  }
+
+
+  constructor(public navCtrl: NavController) {}
+    
+   
+
 }

@@ -1,4 +1,11 @@
 <navbar [title]='title'></navbar>
 <ion-content>
-  <list [items]='items'></list>
+  <!-- <list [items]='items'></list> -->
+  <ion-list *ngFor="let item of homeListData">
+    <ion-item>
+      {{item.title}}
+    </ion-item>
+  </ion-list>
+  <button ion-button class="button" (click) = "ionViewDidLoad()">请求数据</button>
+  <!-- <p>{{homeListData.title}}</p> -->
 </ion-content>
