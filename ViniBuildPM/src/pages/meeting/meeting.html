@@ -1,4 +1,8 @@
 <navbar [title]='title'></navbar>
 <ion-content>
-  <list [items]='items'></list>    
+  <div class="moudle-list">
+      <ion-list class="list" *ngFor = 'let item of res.result'>
+        <ion-item>{{item.title}}</ion-item>
+      </ion-list>
+  </div>
 </ion-content>

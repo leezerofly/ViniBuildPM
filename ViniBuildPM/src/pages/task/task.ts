@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
+// import { LoginPage } from '../login/login'
 //数据请求导入文件
 import {Http,Response,Headers, RequestOptions} from "@angular/http";
 import 'rxjs/add/operator/toPromise';
@@ -14,11 +15,8 @@ import "rxjs/Rx";
 })
 export class TaskPage {
   //定义网络请求数据
-  homeListDate = {
-    'title':''
-
-  };
-  title: string = '任务'
+  homeListDate = {};
+  title: string = '任务';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:Http) {
   }
@@ -30,6 +28,7 @@ export class TaskPage {
   ionViewDidLoad(){                             //网络请求函数
     let _this = this;
     var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1"
+    console.log(this.http.get(url))
     this.http.get(url).map(res => res.json()).subscribe(
           function(data){
             _this.homeListDate = data;
@@ -38,7 +37,7 @@ export class TaskPage {
             }      
       //  data => {console.log(data);}
         );
-    // console.log(this.homeListDate);
+    console.log(this.homeListDate);
   }
 
   // ionViewDidLoad(){                           //网络请求函数
@@ -55,5 +54,10 @@ export class TaskPage {
   //   .then(res => { this.homeListDate = res.json(); })
   //   .catch(err => { console.error(err) });
   // }
+
+     //打开登录界面
+     openLogin() {
+      this.navCtrl.push('LoginPage');
+    }
 
 }

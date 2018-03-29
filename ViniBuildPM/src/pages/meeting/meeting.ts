@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { Http } from '@angular/http';
+import "rxjs/add/operator/map";
 @IonicPage()
 @Component({
   selector: 'page-meeting',
@@ -8,6 +9,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class MeetingPage {
   title: string = '会议'
+
+  data:any
   items = [
     'The Legend of Zelda',
     'Pac-Man',
@@ -25,11 +28,22 @@ export class MeetingPage {
     'Halo'
   ]
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, public http:Http) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MeetingPage');
+    var xml = new XMLHttpRequest();
+    var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
+    xml.open("GET",url,true);
+    var res = {} ;
+    xml.onreadystatechange = function()
+    {
+    if (xml.readyState==4 && xml.status==200)
+      {
+      res = xml.responseText;
+      }
+    }
+    xml.send();
   }
 
 }
