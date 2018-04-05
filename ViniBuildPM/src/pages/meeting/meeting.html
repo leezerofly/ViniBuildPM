@@ -1,8 +1,10 @@
 <navbar [title]='title'></navbar>
 <ion-content>
-  <div class="moudle-list">
-      <ion-list class="list" *ngFor = 'let item of res.result'>
-        <ion-item>{{item.title}}</ion-item>
-      </ion-list>
-  </div>
+    <ion-list >
+      <button ion-item class="detail"  *ngFor="let item of listDate.result" (click) = "detail()">
+        <div class="text">
+            {{item.title}}
+        </div> 
+      </button>
+    </ion-list>
 </ion-content>

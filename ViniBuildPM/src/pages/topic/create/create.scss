@@ -1,17 +1,17 @@
 topic-create {
   button {
-    margin-left: 45%;margin-right: 40%;margin-top: 1%;
-    height: 1cm;width: 10%;
+    margin-top: 1% 40% 0 45%;
+    height: 1cm;
+    width: 10%;
   }
 
   .label {
-    font-size: 20px;font-style: normal;
+    font-size: 20px;
+    font-style: normal;
   }
 
   #topic {
-      margin-left: 20%;
-      margin-right: 20%;
-      margin-top: 5%;
+      margin-top: 5% 20% 0 20%;
       margin-bottom: 10px;
       width: 60%;height: 8%;
       border-radius: 4px;
@@ -21,9 +21,7 @@ topic-create {
   }
   #case {
       display: block;
-      margin-left: 22%;
-      margin-right: 22%;
-      margin-top: 5%;
+      margin-top: 5% 22% 0 22%;
       margin-bottom: 10px;
       border-bottom: 1px solid blue;        
 
@@ -38,15 +36,13 @@ topic-create {
   }
 
   #who {
-      display: block;
+      display: inline-block;
       width: auto;
       border:none;
-      display: inline-block;
-
   }
 
   #content{
-      margin-left: 25%;margin-right: 25%;margin-top: 2%;
+      margin-top: 2% 25% 0 25%;
       width: 50%;
       height: 5cm;
       padding: 5px;

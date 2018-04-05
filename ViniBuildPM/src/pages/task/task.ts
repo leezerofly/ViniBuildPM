@@ -3,9 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 // import { LoginPage } from '../login/login'
 //数据请求导入文件
-import {Http,Response,Headers, RequestOptions} from "@angular/http";
-import 'rxjs/add/operator/toPromise';
-// import {Observable} from "rxjs";
+import {Http} from "@angular/http";
 import "rxjs/Rx";
 
 @IonicPage()
@@ -15,15 +13,12 @@ import "rxjs/Rx";
 })
 export class TaskPage {
   //定义网络请求数据
-  homeListDate = {};
+  listDate = {};
   title: string = '任务';
 
   constructor(public navCtrl: NavController, public navParams: NavParams,private http:Http) {
   }
 
-  // ionViewDidLoad() {
-  //   console.log('ionViewDidLoad TaskPage');
-  // }
 
   ionViewDidLoad(){                             //网络请求函数
     let _this = this;
@@ -31,14 +26,29 @@ export class TaskPage {
     console.log(this.http.get(url))
     this.http.get(url).map(res => res.json()).subscribe(
           function(data){
-            _this.homeListDate = data;
+            _this.listDate = data;
           },function (error){
                console.log(error);
             }      
       //  data => {console.log(data);}
         );
-    console.log(this.homeListDate);
+    console.log(this.listDate);
   }
+
+      // var xml = new XMLHttpRequest();
+    // xml.responseType ='text';
+    // var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
+    // xml.open("GET",url,true);
+    // var res = {} ;
+    // xml.onreadystatechange = function()
+    // {
+    // if (xml.readyState==4 && xml.status==200)
+    //   {
+    //   res  = xml.responseText;
+    //   }
+    // }
+    // xml.send();
+    // console.log(res); 
 
   // ionViewDidLoad(){                           //网络请求函数
   //   var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1"
@@ -54,6 +64,13 @@ export class TaskPage {
   //   .then(res => { this.homeListDate = res.json(); })
   //   .catch(err => { console.error(err) });
   // }
+
+  
+    //打开帖子详情 暂时未创建 用登录页面代替
+    detail() {
+      this.navCtrl.push('LoginPage');
+    }
+
 
      //打开登录界面
      openLogin() {

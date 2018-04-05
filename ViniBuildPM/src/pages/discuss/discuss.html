@@ -1,4 +1,10 @@
 <navbar [title]='title'></navbar>
 <ion-content>
-  <list [items]='items'></list>
+    <ion-list >
+      <button ion-item class="detail"  *ngFor="let item of listDate.result" (click) = "detail()">
+        <div class="text">
+            {{item.title}}
+        </div> 
+      </button>
+    </ion-list>
 </ion-content>
