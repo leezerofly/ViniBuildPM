@@ -1,4 +1,12 @@
 <navbar [title]='title'></navbar>
 <ion-content>
-  <list [items]='items'></list>
+  <ion-list >
+    <button ion-item class="detail"  *ngFor="let item of listDate.result" (click) = "detail()">
+      <div class="text">
+          {{item.title}}
+      </div> 
+    </button>
+  </ion-list>
+  <button ion-button class="button" (click) = "ionViewDidLoad()">请求数据</button>
+  <button ion-button class="button1" (click) = "openLogin()">登录</button>
 </ion-content>
