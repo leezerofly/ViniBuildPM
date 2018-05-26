@@ -3,4 +3,17 @@ changePwd {
     width: 100%;
     height: 20px;    
   }
+   .myLongDiv 
+    {
+      top:65%;
+      left:60%;
+      border:1px;
+      border-style:solid;
+      border-color:White;
+      position:absolute;
+      width:180px;
+      height:70px;
+      margin:-170px 0 0 -125px;
+      font-size:10px;
+    }  
 }

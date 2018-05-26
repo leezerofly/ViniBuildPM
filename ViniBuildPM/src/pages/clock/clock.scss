@@ -1,3 +1,32 @@
 page-clock {
 
+ #petMain{
+    background:
+    -webkit-gradient(linear,
+    center top,center bottom,
+    from(#0066FF),
+    to(#00FFFF))
+    !important;
+    opacity: 0.95;
+    font-style: {color: #FFF};
+    text-align: center;
+  }
+
+ #img {
+   position: relative;
+   width: 100px;
+   height: 200px;
+   top: 50px;
+ }
+
+ .item{
+    opacity:0.7;
+    height: 30px;
+    font-family: cursive;
+    font-weight: 40;
+    font-weight: 900;
+    font-size: 20px;
+    color: #000
+  }
+
 }

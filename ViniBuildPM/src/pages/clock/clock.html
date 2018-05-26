@@ -7,12 +7,31 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>clock</ion-title>
+    <ion-title style="text-align: center">我要打卡</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding id="petMain">
+  <h1 text-align=＂center＂>{{time1}}</h1>
+  <h2 text-align:center>{{time2}}</h2>
+  <button ion-button color="dark" clear icon-only (click)="doAlert()" style="height: 100px; width: 120px; top: 10px">
+  <ion-icon id="img" name="ios-clock-outline" style="font-size: 80px; top: 70px; left: -20px"></ion-icon>
+  </button>
+  <h2 style="font-size: 20px;fon-family:'黑体'">{{type}}</h2>
+  <ion-item style="top: 40px">
+    <button ion-item >
+      <ion-icon name='ios-pin-outline' item-start ></ion-icon>
+      外勤打卡
+      <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
+    </button>
+  </ion-item>
+  <ion-item style="top: 40px">
+    <button ion-item>
+      <ion-icon name='ios-stats-outline' item-start ></ion-icon>
+      打卡日历
+      <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
+    </button>
+  </ion-item>
 </ion-content>

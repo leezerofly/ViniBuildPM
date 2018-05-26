@@ -1,37 +1,32 @@
-<ion-list>
+  <ion-card id="content">
+    <img src="assets/imgs/background.jpg" />
+    <div class="username">***</div>
+    <span class="userage">20岁</span>
+    <span class="sex">女</span>
+    <span class="place">河北 张家口</span>
   <ion-item>
-    <ion-label>用户名</ion-label>
-    <ion-input type="text" value=""></ion-input>
+    <button ion-item>
+      <ion-icon name='ios-person-outline' item-start ></ion-icon>
+      Rudy
+      <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
+    </button>
   </ion-item>
   <ion-item>
-    <ion-label>真实姓名</ion-label>
-    <ion-input type="password" value=""></ion-input>
+    <button ion-item>
+      <ion-icon name='ios-call-outline' item-start ></ion-icon>
+      11111111111
+      <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
+    </button>
   </ion-item>
   <ion-item>
-    <select>
-        <option *ngFor="let u of gender" (click)="setClassify(u)">{{u}}</option>
-    </select>
-  </ion-item>
-  <ion-item>
-    <ion-label>联系方式</ion-label>
-    <ion-input type="password" value=""></ion-input>
-  </ion-item>
-  <ion-item>
-    <ion-label>个性签名</ion-label>
-    <ion-input type="text" value=""></ion-input>
-  </ion-item>
-</ion-list>
+    <button ion-item>
+      <ion-icon name='ios-create-outline' item-start ></ion-icon>
+      ...............
+      <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
+    </button>
 
-<ion-card>
-  <ion-card-content>
-    <img src="assets/imgs/logo.png" />
-  </ion-card-content>
-
-  <ion-item>
-    <button ion-button clear color="primary">选择图片</button>
   </ion-item>
 </ion-card>
-
 <div padding>
   <button ion-button color="light" block>编辑</button>
 </div>
