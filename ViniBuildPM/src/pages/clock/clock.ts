@@ -58,8 +58,6 @@ export class ClockPage {
       title: '打卡成功',
     });
     alert.present()
-    if(type=="上班打卡")
-      type:string = "下班打卡"
   }
 
   ionViewDidLoad() {
