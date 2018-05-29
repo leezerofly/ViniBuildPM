@@ -14,6 +14,10 @@
 
 
 <ion-content padding id="petMain">
+  <div #map id="map_container2"></div>
+    <div id="btn_location">
+    <button ion-button  class="btn_loaction" (click)="getLocation()">GPS点击定位</button>
+  </div>
   <h1 text-align=＂center＂>{{time1}}</h1>
   <h2 text-align:center>{{time2}}</h2>
   <button ion-button color="dark" clear icon-only (click)="doAlert()" style="height: 100px; width: 120px; top: 10px">
@@ -28,7 +32,7 @@
     </button>
   </ion-item>
   <ion-item style="top: 40px">
-    <button ion-item>
+    <button ion-item (click)="openCalendarPage()">
       <ion-icon name='ios-stats-outline' item-start ></ion-icon>
       打卡日历
       <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>
