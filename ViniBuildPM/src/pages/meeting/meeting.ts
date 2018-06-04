@@ -52,6 +52,6 @@ export class MeetingPage {
       
     //打开帖子详情 暂时未创建 用登录页面代替
     detail() {
-      this.navCtrl.push('LoginPage');
+      this.navCtrl.push('ListDetailPage');
     }
 }

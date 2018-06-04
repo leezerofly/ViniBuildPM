@@ -6,6 +6,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {Http} from "@angular/http";
 import "rxjs/Rx";
 
+import $ from 'jquery'
+import { ChangeDetectorRef } from '@angular/core';   //刷新界面
+
 @IonicPage()
 @Component({
   selector: 'page-task',
@@ -16,65 +19,37 @@ export class TaskPage {
   listDate = {};
   title: string = '任务';
 
-  constructor(public navCtrl: NavController, public navParams: NavParams,private http:Http) {
+  constructor(public navCtrl: NavController,public cd: ChangeDetectorRef, public navParams: NavParams,private http:Http) {
   }
 
 
   ionViewDidLoad(){                             //网络请求函数
-    let _this = this;
-    var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1"
-    console.log(this.http.get(url))
-    this.http.get(url).map(res => res.json()).subscribe(
-          function(data){
-            _this.listDate = data;
-          },function (error){
-               console.log(error);
-            }      
-      //  data => {console.log(data);}
-        );
-    console.log(this.listDate);
+ 
+   $.ajax({
+     type:"POST",
+     url: "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1",
+     dataType:"json",
+     success:function(data){
+      console.log(data);
+      this.listDate = data;
+    }
+   })
+
   }
 
-      // var xml = new XMLHttpRequest();
-    // xml.responseType ='text';
-    // var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1";
-    // xml.open("GET",url,true);
-    // var res = {} ;
-    // xml.onreadystatechange = function()
-    // {
-    // if (xml.readyState==4 && xml.status==200)
-    //   {
-    //   res  = xml.responseText;
-    //   }
-    // }
-    // xml.send();
-    // console.log(res); 
-
-  // ionViewDidLoad(){                           //网络请求函数
-  //   var url = "http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1"
-  //    new Promise(resolve => {this.http.get(url).subscribe(res => {
-  //     this.homeListDate = res.json();
-  //     });   
-  //   }); 
-  // }
-
-  // ionViewDidLoad(){                             //网络请求函数
-  //   this.http.request('http://www.phonegap100.com/appapi.php?a=getPortalList&catid=20&page=1')
-  //   .toPromise()
-  //   .then(res => { this.homeListDate = res.json(); })
-  //   .catch(err => { console.error(err) });
-  // }
-
+    
   
     //打开帖子详情 暂时未创建 用登录页面代替
     detail() {
-      this.navCtrl.push('LoginPage');
+      this.navCtrl.push('ListDetailPage');
     }
 
 
      //打开登录界面
      openLogin() {
-      this.navCtrl.push('LoginPage');
+      // this.navCtrl.push('LoginPage');
+      this.cd.detectChanges();  
+      console.log("ok");
     }
 
 }

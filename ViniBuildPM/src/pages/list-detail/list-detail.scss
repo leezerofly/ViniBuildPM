@@ -1,0 +1,41 @@
+page-list-detail {
+  .list-title {
+    position: relative;
+    width: 800px;
+    height: 100px;
+    top: 0px;
+    margin: 0 auto;
+    background-color: yellow;   
+  }
+  .text-area {
+      position: relative;
+      width: 800px;
+      height: 300px;
+      top: 10px;
+      margin: 0 auto;
+      background-color: yellow;
+  }
+  .input-area {
+    position: relative;
+    width: 800px;
+    height: 100px;
+    top: 20px;
+    margin: 0 auto;
+    background-color: yellow;
+  }
+  .input-line {
+    display: inline-block;
+    position: relative;
+    width: 650px;
+    margin-left: 10px;
+    top: 6px;
+    background-color: blue;
+  }
+  .button-send {
+    position: relative;
+    display: inline-block;
+    width: 100px;
+    height: 43px;
+    left: 20px;
+  }
+}
