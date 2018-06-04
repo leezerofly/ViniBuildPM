@@ -4,6 +4,12 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
+ <!-- <script type="text/javascript"> -->
+  <!-- window.onload=function()//用window的onload事件，窗体加载完毕的时候 -->
+ <!-- {
+    getLocation() ;
+  }
+</script>-->
 <ion-header>
 
   <ion-navbar>
@@ -32,7 +38,7 @@
     </button>
   </ion-item>
   <ion-item style="top: 40px">
-    <button ion-item (click)="openCalendarPage()">
+    <button ion-item (click)="goCalendar()">
       <ion-icon name='ios-stats-outline' item-start ></ion-icon>
       打卡日历
       <ion-icon name='ios-arrow-forward-outline' item-end color="light"></ion-icon>

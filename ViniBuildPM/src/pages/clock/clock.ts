@@ -2,6 +2,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Calendar } from '@ionic-native/calendar'; 
+//import { CalendarPage } from '../calendar/calendar';
 /**
  * Generated class for the ClockPage page.
  *
@@ -27,7 +29,8 @@ export class ClockPage {
   time2: any; 
   type : string = "上班打卡";
   constructor(public navCtrl: NavController, public navParams: NavParams,
-              public alerCtrl: AlertController, private geolocation: Geolocation) {
+              public alerCtrl: AlertController, private geolocation: Geolocation,
+              private calendar: Calendar) {
     this.myIcon = new BMap.Icon("assets/icon/favicon.ico", new BMap.Size(30, 30));
     var date = new Date();
     var year = date.getFullYear();
@@ -115,12 +118,26 @@ export class ClockPage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad ClockPage');
-  }
+    console.log('ionViewDidLoad ClockPage')
+   }
 
-  //openCalendarPage() {
-  //  this.navCtrl.push(CalendarPage);
-  //}
+  getcalender(){  
+      
+    this.calendar.createCalendar('MyCalendar').then(  
+      (msg) => { console.log(msg);},  
+      (err) => { console.log(err);}  
+    );  
+  
+    this.calendar.openCalendar(new Date()).then(  
+      (msg) => { console.log(msg);},  
+      (err) => { console.log(err);}  
+    );  
+  }  
+
+  goCalendar(){
+    // this.navCtrl.push('页面');
+    this.navCtrl.push('CalendarPage');
+  }
 
 }
 

@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { HttpModule } from '@angular/http';
 import { Geolocation } from '@ionic-native/geolocation';
+import { Calendar } from '@ionic-native/calendar';
 
 import { MyApp } from './app.component';
 import { AppProvider } from '../providers/app/app';
@@ -16,7 +17,7 @@ import { AppProvider } from '../providers/app/app';
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    HttpModule
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -27,7 +28,8 @@ import { AppProvider } from '../providers/app/app';
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AppProvider,
-    Geolocation
+    Geolocation,
+    Calendar
   ]
 })
 export class AppModule {}
